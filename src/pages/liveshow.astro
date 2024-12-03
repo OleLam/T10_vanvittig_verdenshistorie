@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
 const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_shows", {
     method: "GET",
     headers: {
@@ -9,7 +10,16 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 
 console.log(data);
 ---
+
 <MainLayout metatitle="liveshow">
+<section>{
+    // mapping igenem data og returnerer et card for hver show
+    data.map((shows) => (
+       return <card {...shows}/>
+    ))
+}
+</section>
+
     <h1> Live Show </h1>
 
 </MainLayout>
