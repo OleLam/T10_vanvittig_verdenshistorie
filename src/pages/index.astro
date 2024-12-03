@@ -2,30 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Card from "../components/Card.astro";
 ---
+<MainLayout metatitle="VV">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
+	<h1>Velkommen til Astro</h1>
 
-		<h1>Astro</h1>
-		<main>
-
-<Card />
-		</main>
-	</body>
-</html>
-
-<script>const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_shows", {
-    method: "GET",
-    headers: {
-        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wenNpeXJsaGd5cmxncWlobWxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI2NDI1MTEsImV4cCI6MjA0ODIxODUxMX0.klMuw3yaTjBtbbNh1X8UpiCQzsvctaGUNlBp6RC8oz8"
-    }
-}).then(res=>res.json());
-
-console.log(data);</script>
+	<MainLayout/>
