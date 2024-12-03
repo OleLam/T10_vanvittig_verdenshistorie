@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_shows", {
+    method: "GET",
+    headers: {
+        apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5wenNpeXJsaGd5cmxncWlobWxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI2NDI1MTEsImV4cCI6MjA0ODIxODUxMX0.klMuw3yaTjBtbbNh1X8UpiCQzsvctaGUNlBp6RC8oz8"
+    }
+}).then(res=>res.json());
+
+console.log("hej");
+console.log(data);
+---
+<MainLayout>
+    <h1> Live Show </h1>
+
+</MainLayout>
+
+
+
+          
