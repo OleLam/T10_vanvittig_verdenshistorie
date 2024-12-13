@@ -1,5 +1,4 @@
 ---
-import TopNav from "../components/TopNav.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Podcastoversigt from "../components/Podcastoversigt.astro";
 import Afsnitfilter from "../components/Afsnitfilter.astro";
@@ -8,11 +7,11 @@ import Style from "../styles/styles.css";
 ---
 
 
-    <MainLayout>
+<main>
  <!-- Hero sektion -->
  <div class="section_podcast_header">
     <h1>Lyt til vores podcast</h1>
-    <h3>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en
+    <h3>Hoer vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en
         øl,
         deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </h3>
     <img src="billeder/lyt_med_illu4.svg" alt="lyt med">
@@ -21,11 +20,11 @@ import Style from "../styles/styles.css";
 <!-- Oversigt over hvilke podcasts de har -->
 <div class="oversigt_over_podcast">
 <h2>Vanvittig Verdenshistorie</h2>
-<Podcastoversigt/>
+<Podcastoversigt />
 <!-- Filter efter år -->
-<Afsnitfilter/>
+<Afsnitfilter />
 <!-- Karrusel af afsnit -->
- <Karruselepisoder/>
+ <Karruselepisoder />
 </div> 
 </div>
 
@@ -44,13 +43,14 @@ import Style from "../styles/styles.css";
     </a>
 </div>
 
-    </MainLayout>
-
+   
+</main>
 
     <style>
 
     </style>
 
 <script>
+
 
 </script>
