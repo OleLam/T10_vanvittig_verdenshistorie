@@ -3,6 +3,115 @@ import TopNav from "../components/TopNav.astro";
 ---
 
 
+    <Main>
+ <!-- Hero sektion -->
+ <div class="section_podcast_header">
+    <h1>Lyt til vores podcast</h1>
+    <h3>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en
+        øl,
+        deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </h3>
+    <img src="billeder/lyt_med_illu4.svg" alt="lyt med">
+</div>
 
-<h1>Lyt til vores podcast</h1>
-<h3>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </h3>
+<!-- Oversigt over hvilke podcasts de har -->
+<h2>Vanvittig Verdenshistorie</h2>
+<div class="section_podcast_lyd">
+    <div class="Podcast_card_1">
+        <img src="billeder/podcast.webp" alt="hovedpodcast billede">
+        <h3>Vanvittig Verdenshistorie</h3>
+        <div class="b3"> Hør vores hovedpodcast! Her får du 90 min. vild historie i din øregang.</div>
+        <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
+            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
+    </div>
+
+    <div class="Podcast_card_2">
+        <img src="billeder/pixi.webp" alt="podcast pixi">
+        <h3>Vanvittig Verdenshistorie Pixi</h3>
+        <div class="b3"> Her får du 20 min. korte røverhistorier. </div>
+        <a href="https://open.spotify.com/show/4hS2R6sn9LQ1FgVewrTe40" target="pixi">
+            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
+    </div>
+
+    <div class="Podcast_card_3">
+        <img src="billeder/jule.webp" alt="Julekalender">
+        <h3>Special - Julekalender</h3>
+        <div class="b3"> Hver dag i gennem hele december får du én 5 min. historie. </div>
+        <a href="https://open.spotify.com/show/2e7osVv7BU0I4fgaFqbJpJ" target="jul">
+            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
+    </div>
+</div>
+
+
+<!-- Filter efter år -->
+<div class="afsnit_karrusel">
+    <div class="filter_aar">
+        <button>2024</button>
+        <button>2023</button>
+        <button>2022</button>
+        <button>2021</button>
+        <button>2020</button>
+        <button>2019</button>
+        <button>2018</button>
+    </div>
+
+
+    <!-- Karrusel af afsnit -->
+    <div class="section_karrusel">
+
+        <div class="card_episode_1">
+            <img src="billeder/meltilmillioner.webp" alt="afsnit_214">
+            <div class="b3"> #214: Mel for Millioner</div>
+
+            <!-- Audio på play -->
+            <div class="lyd_play">
+                <audio id="myAudio1" class="audio" preload="auto">
+                    <source src="audio/NY-citat-midt-podcast.m4a" type="audio/mp3">
+                </audio>
+                <div class="lyd_play" id="playBtn1">
+                    <img src="billeder/play_logo.svg" alt="play">
+                </div>
+            </div>
+        </div>
+
+        <div class="card_episode_2">
+            <img src="billeder/aus.webp" alt="afsnit_215">
+            <div class="b3"> #213: I Auschwitz... Med vilje (REQUEST)</div>
+
+            <!-- Audio på play -->
+            <div class="lyd_play">
+                <audio id="myAudio2" class="audio" preload="auto">
+                    <source src="audio/Intro-VVH.m4a" type="audio/mp3">
+                </audio>
+                <div class="lyd_play" id="playBtn2">
+                    <img src="billeder/play_logo.svg" alt="play">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vanvidsbarometer -->
+<div class="section_vanvidsbarometer">
+    <h2>vanvidsbarometer</h2>
+    <h3>I hvert afsnit vurderer vi historien på vores eget vanvidsbarometer. Her vurderer vi vildskab, lol-faktor,
+        uniqueness, indflydelse og ekstra spice.
+    </h3>
+    <div class="b2"> Check Barometer Bjarke ud, som har visualiseret og lavet infografik til det meste vi nævner i
+        podcasten, holder regnskab på vores barometer og meget mere!</div>
+
+    <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
+    <a href="https://barometerbjarke.dk/" target="_blank" rel="noopener noreferrer">
+        <button type="button">Barometer Bjarke</button>
+    </a>
+</div>
+
+    </Main>
+
+
+    <style>
+
+    </style>
+
+<script>
+
+</script>
