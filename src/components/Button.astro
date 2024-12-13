@@ -1,47 +1,12 @@
-<div class="buytickets"> 
-    
-    <h4> Buy Tickets</h4>
-    </div>
-    
-    <style>
-        h4{
-            font-size: 13px;
-              font-family: "Prompt", sans-serif;
-       color: var(--secondary-color);
-        }
-    
-    .buytickets {
-    border-radius: 1000px;
-    border: 1px solid #FFF;
-    display: flex;
-    width: 118px;
-    height: 40px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-    }
-    
-    @media (max-width: 480px) 
-    {
-     .buytickets {    display: flex;
-    width: 67px;
-    height: 22px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
-     }
-    
-    h4{
-    font-size: 8px;
-    font-family: "Prompt", sans-serif;
-    color: var(--secondary-color);
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-        }
-    }
-    </style>
+---
+const {variant,size} = Astro.props;
+---
+
+<button class="variant" ><slot/></button>
+
+<style>
+button{ padding: 1rem;}
+
+.primary {background-color: blue;}
+</style>
+
