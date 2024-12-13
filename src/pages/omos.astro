@@ -1,31 +1,63 @@
 ---
-import TopNav from "../components/TopNav.astro";
 import "../styles/styles.css";
-import "../styles/layout.css";
+import TopNav from "../components/TopNav.astro";
 import Footer from "../components/Footer.astro";
-import Billedebillede from "../components/Billedebillede.astro";
+import CardOmOs from "../components/CardOmOs.astro";
+import Instagram from "../components/Instagram.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 <main>
+    <MainLayout />
 <layout title="Om Os">
     <h1>Vanvittig Verdenshistorie</h1>
 <h2>Om os</h2>
-<p class="b2">Vi er Alexander og Peter, to venner med en passion for oel, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skøreste fortaellinger fra verdenshistorien fra nutid til  fortid.</p>
+<p class="b2">Vi er Alexander og Peter, to venner med en passion for oel, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skoereste fortaellinger fra verdenshistorien fra nutid til fortid.</p>
 
-<Billedebillede />
+<CardOmOs />
+<Instagram />
 
 <h2>Vil du stoette podcasten?</h2>
 <p>Foerst og fremmest: TAK!
 Vi er en gratis podcast, der ikke direkte tjener penge paa, at folk som dig lytter med! Derfor er sponsorater og donationer med til at holde gang i hjulene. En rigtig god maade at stoette paa er ved at donere et fast, lavt beloeb pr. afsnit via 10er.dk.</p>
 
 <h2>Kom til vores Live Shows</h2>
-<p>Vi turnerer jaevnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder paa - men vi lover dig, at det bliver sjovt! </p>
+<p>Vi turnerer jaevnligt med podcasten. Paa nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder paa - men vi lover dig, at det bliver sjovt! </p>
 <Footer />
 </main>
 
 <style>
- p, h1, h2, h3{
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+    main{
+        background-color: #582d32;
+    }
+     p, h1, h2, h3{
         color: #fffdea;
         max-width: 55ch;
+        padding: 10px;
+
     }
-   
+    h1{
+  font-family: "puffin-display", sans-serif;
+    }
+    h2, p{
+  font-family: "poiret-one", sans-serif;
+    }
+ 
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+
+}
+
 </style>
