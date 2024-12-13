@@ -1,6 +1,10 @@
 ---
 import TopNav from "../components/TopNav.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Podcastoversigt from "../components/Podcastoversigt.astro";
+import Afsnitfilter from "../components/Afsnitfilter.astro";
+import Karruselepisoder from "../components/Karruselepisoder.astro";
+import Style from "../styles/styles.css";
 ---
 
 
@@ -15,80 +19,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 </div>
 
 <!-- Oversigt over hvilke podcasts de har -->
+<div class="oversigt_over_podcast">
 <h2>Vanvittig Verdenshistorie</h2>
-<div class="section_podcast_lyd">
-    <div class="Podcast_card_1">
-        <img src="billeder/podcast.webp" alt="hovedpodcast billede">
-        <h3>Vanvittig Verdenshistorie</h3>
-        <div class="b3"> Hør vores hovedpodcast! Her får du 90 min. vild historie i din øregang.</div>
-        <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
-            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
-    </div>
-
-    <div class="Podcast_card_2">
-        <img src="billeder/pixi.webp" alt="podcast pixi">
-        <h3>Vanvittig Verdenshistorie Pixi</h3>
-        <div class="b3"> Her får du 20 min. korte røverhistorier. </div>
-        <a href="https://open.spotify.com/show/4hS2R6sn9LQ1FgVewrTe40" target="pixi">
-            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
-    </div>
-
-    <div class="Podcast_card_3">
-        <img src="billeder/jule.webp" alt="Julekalender">
-        <h3>Special - Julekalender</h3>
-        <div class="b3"> Hver dag i gennem hele december får du én 5 min. historie. </div>
-        <a href="https://open.spotify.com/show/2e7osVv7BU0I4fgaFqbJpJ" target="jul">
-            <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
-    </div>
-</div>
-
-
+<Podcastoversigt/>
 <!-- Filter efter år -->
-<div class="afsnit_karrusel">
-    <div class="filter_aar">
-        <button>2024</button>
-        <button>2023</button>
-        <button>2022</button>
-        <button>2021</button>
-        <button>2020</button>
-        <button>2019</button>
-        <button>2018</button>
-    </div>
-
-
-    <!-- Karrusel af afsnit -->
-    <div class="section_karrusel">
-
-        <div class="card_episode_1">
-            <img src="billeder/meltilmillioner.webp" alt="afsnit_214">
-            <div class="b3"> #214: Mel for Millioner</div>
-
-            <!-- Audio på play -->
-            <div class="lyd_play">
-                <audio id="myAudio1" class="audio" preload="auto">
-                    <source src="audio/NY-citat-midt-podcast.m4a" type="audio/mp3">
-                </audio>
-                <div class="lyd_play" id="playBtn1">
-                    <img src="billeder/play_logo.svg" alt="play">
-                </div>
-            </div>
-        </div>
-
-        <div class="card_episode_2">
-            <img src="billeder/aus.webp" alt="afsnit_215">
-            <div class="b3"> #213: I Auschwitz... Med vilje (REQUEST)</div>
-
-            <!-- Audio på play -->
-            <div class="lyd_play">
-                <audio id="myAudio2" class="audio" preload="auto">
-                    <source src="audio/Intro-VVH.m4a" type="audio/mp3">
-                </audio>
-                <div class="lyd_play" id="playBtn2">
-                    <img src="billeder/play_logo.svg" alt="play">
-                </div>
-            </div>
-        </div>
-    </div>
+<Afsnitfilter/>
+<!-- Karrusel af afsnit -->
+ <Karruselepisoder/>
+</div> 
 </div>
 
 <!-- Vanvidsbarometer -->
