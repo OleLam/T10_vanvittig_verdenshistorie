@@ -91,8 +91,6 @@ import Footer from "../components/Footer.astro";
 
 <style>
   /* Mobil */
- @media (max-width: 480px) {
-
   .topmenu {
     display: none;
   }
@@ -112,7 +110,7 @@ import Footer from "../components/Footer.astro";
 
 .episoder {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolonner på små skærme */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 8px;
 }
 
@@ -141,9 +139,8 @@ p {
     margin-bottom: 8px;
 }
 
-}
-
   /* Desktop */ 
+  @media (min-width: 768px) { 
 .bottomnav {
   display: none;
 }
@@ -154,7 +151,8 @@ p {
     padding: 24px;
     margin: 0;
     width: 100%; 
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
   .podcast-list {
     margin-top: 80px;
     display: grid;
@@ -169,6 +167,10 @@ p {
     gap: 58px;
 }
 
+.episoder img {
+  
+}
 
+}
 
 </style>

@@ -1,0 +1,60 @@
+---
+import Button from "../components/Button.astro";
+import "../styles/styles.css";
+---
+
+<main>
+    <img src="public/billeder/bog.webp" alt="bog">
+    <h3>Vanvittig Verdenshistorie bog</h3>
+    <p>Vi har skrevet en bog!</p>
+    <p>"Vanvittig Verdenshistorie: 50 Røverhistorier fra virkeligheden" er et produkt af kærlighed. Kærlighed til en god røverhistorie over en øl. Kærlighed til fortiden og det, den kan lære os om nutiden. Og en kærlighed til dybt idiotiske fun facts.</p>
+    <div class="button"> <Button variant="primary" size="medium">Kob bogen</Button>  </div>
+    <div class="pris"> 149 DKK </div>
+</main>
+
+<style>
+/* Mobil */
+main{
+    margin: 24px;
+}
+
+img {
+    width: 359px;
+    height: 319.18px;
+    border-radius: 30px;
+}
+
+h3{
+color: #FFFDEA;
+font-family: "poiret-one", sans-serif;
+font-size: 28px;
+}
+
+p {
+font-family: "Martel", serif;
+ font-size:12px ;
+ color: #FFFDEA;
+ line-height: 20px;
+}
+
+.button {
+display: flex;
+justify-content: flex-end;
+margin-right: 24px;
+}
+
+.pris {
+color: rgba(255, 253, 234, 0.60);
+font-family: "Martel Sans";
+font-size: 10px;
+line-height: 20px;
+display: flex;
+justify-content: flex-end;
+margin-right: 24px;
+}
+
+.pris p {
+    margin-right: 24px;
+}
+
+</style>

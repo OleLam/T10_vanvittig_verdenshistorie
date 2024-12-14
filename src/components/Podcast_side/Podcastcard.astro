@@ -18,8 +18,7 @@ const {imgSrc, header, text} = Astro.props;
 
 <style>
   /* Mobil */
-    @media (max-width: 480px) {
-  .spotify img {
+    .spotify img {
     height: 24px;
     width: 24px;
   }
@@ -56,32 +55,34 @@ const {imgSrc, header, text} = Astro.props;
     margin-bottom: 20px;
     margin-top: 8px;
   }
-    }
+    
   
-  /* Website */
-  h3{
-    color: #582d32;
-    font-size: 48px;
-    margin-top: 16px;
-    width: 80%;
-  }
+    @media (min-width: 768px){
+      /* Website */
+h3{
+  color: #582d32;
+  font-size: 48px;
+  margin-top: 16px;
+  width: 80%;
+}
 
-  p{
-    font-family: "Martel Sans", serif;
-    font-size: 0.75rem;
-    color:#582d32;
-    margin-bottom: 20px;
-    margin-top: 8px;
-    width: 80%;
-  }
+p{
+  font-family: "Martel Sans", serif;
+  font-size: 0.75rem;
+  color:#582d32;
+  margin-bottom: 20px;
+  margin-top: 8px;
+  width: 80%;
+}
 
-  .podcast-card img {
-    width: 383px;
-    height: 367px;
-    border-radius: 30px;
-  }
+.podcast-card img {
+  width: 383px;
+  height: 367px;
+  border-radius: 30px;
+}
 
-  text{
-    width: 80%;
-  }
+text{
+  width: 80%;
+}
+    }
 </style>

@@ -1,0 +1,52 @@
+---
+import "../styles/styles.css";
+import Topmenu from "../components/Topmenu.astro";
+import Bottomnav from "../components/Bottomnav.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Shopcard from "../components/Shopcard.astro";
+---
+
+<main>
+<div class="bottomnav"> <Bottomnav /> </div>
+<div class="topmenu"> <Topmenu /></div>
+<MainLayout /> 
+<div class="intro"> 
+<h1>Shop</h1>
+<h2>Vanvittig Verdenshistorie</h2>
+<h3>Som en god podcast har vi lavet merge, så i kan flashe at i er fans af Vanvittig Verdenshistorie og i kan hjælpe med at støtte os.</h3>
+</div>
+<Shopcard />
+
+<Footer />
+</main>
+
+<style>
+    /* Mobil */
+/* Intro */
+.topmenu {
+    display: none;
+}
+
+.intro {
+    margin: 16px;
+}
+
+h1{
+font-size: 36px;  
+color: #FFFDEA; 
+}
+
+h2{
+color: #FFFDEA;
+font-family: "poiret-one", sans-serif;
+font-size: 28px;   
+}
+
+h3{
+color: #FFFDEA;
+font-family: "poiret-one", sans-serif;
+}
+
+</style>

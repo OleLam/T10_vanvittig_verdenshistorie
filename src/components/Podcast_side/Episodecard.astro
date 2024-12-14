@@ -52,72 +52,9 @@ const { imgSrc, text } = Astro.props;
     }
 
     /* desktop */
-    img {
-    width: 199px;
-    height: 196px;
-    border-radius: 30px;
-  }
 
-  .lyd_play_1 img {
-    height: 24px;
-    width: 24px;
-  }
-  h3{
-    color: #582d32;
-  }
+<style>
 
-  p{
-    font-family: "Martel Sans";
-    font-size: 0.75rem;
-    color:#582d32;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    width: 80%;
-  }
-
-  .episode-container {
-  display: flex;            /* Brug flexbox til horisontal visning */
-  overflow-x: auto;         /* Tillad horisontal rulning, når elementerne ikke passer i containeren */
-  gap: 20px;                /* Giver lidt afstand mellem Episodecard komponenterne */
-  padding: 10px 0;          /* Lidt polstring til containerens top og bund */
-}
-
-.episode-card {
-  display: flex;            /* Sørger for, at elementerne ligger horisontalt */
-  flex-wrap: nowrap;        /* Forhindrer linjeskift */
-}
-
-.episode-card {
-  flex-shrink: 0;           /* Forhindrer Episodecard i at krympe */
-  width: 250px;             /* Fast bredde på hver Episodecard, kan justeres */
-  height: auto;             /* Højden tilpasser sig automatisk */
-  border-radius: 10px;      /* Rundede hjørner for en pænere visning */
-  background-color: #fff;   /* Baggrundsfarve */
-  padding: 10px;            /* Polstring inde i Episodecard */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Let skygge omkring kortene */
-}
-
-.episode-card img {
-  width: 100%;              /* Billedet fylder bredden af kortet */
-  height: 150px;            /* Giv en fast højde til billedet */
-  object-fit: cover;        /* Sørger for at billedet dækker pladsen uden at blive strakt */
-  border-radius: 8px;       /* Rundede hjørner på billedet */
-}
-
-.episode-card p {
-  font-family: "Martel Sans", sans-serif;
-  font-size: 1rem;
-  color: #582d32;           /* Farve på tekst */
-  margin: 8px 0;            /* Margin mellem billede og tekst */
-  text-align: center;       /* Centrerer teksten */
-}
-
-.lyd_play_1 img {
-  width: 24px;              /* Juster størrelsen på play/pause ikonet */
-  height: 24px;
-}
-  
-</style>
 
 
   <!-- Script til afspilning -->
