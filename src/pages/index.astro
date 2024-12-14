@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/styles.css"
 import Button from "../components/Button.astro";
+import TopNav from "../components/TopNav.astro"
 ---
 
 <!DOCTYPE html>
@@ -15,9 +16,8 @@ import Button from "../components/Button.astro";
   </head>
 
 <main>
+<TopNav />
 <MainLayout/>
-
-
 <h2>Hvem er vi?</h2>
 <b3>
 	Vi er Alexander og Peter, to venner med en passion for øl, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skøreste fortællinger fra verdenshistorien – fra nutid til  fortid.
@@ -27,6 +27,15 @@ import Button from "../components/Button.astro";
 <img src="billeder/podcast_billeder/Privat_peterogalex.png" alt="billede af peter og alexander">
 <h2>Lyt til et udsnit af podcasten</h2>
 
+<h2> Kom & se os live</h2>
+
+<div> 
+	<b3> Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! 
+	<b3/>
+	<Button vartian="primary"size="medium"> Live shows </Button>
+	<img src="billeder/podcast_billeder/live_illu 2.svg" alt="illustation af sofa og lys">
+
+<div/> 
 
 <Footer  />
 
