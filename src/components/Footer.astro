@@ -1,55 +1,71 @@
 ---
-
+import Card from "../components/Newsletter.astro";
 ---
-
 <footer>
-   <section>
-
-     <div>
-      <h3>Kontakt</h3>
-      <b3>Booking</b3>
-      <b3>Martin@bentertained.dk</b3>
-    </div>
+<div>
+<Card/>
+<div/>
+<h3>Kontakt</h3>
+<article class ="footer_1_1" >
     <div>
-      <b3>Sponsorater</b3>
-      <b3>Oliver@podcast.dk</b3>
+        <div>
+            <b3>Booking</b3>
+             <b3>Martin@bentertained.dk</b3>
+         </div>
+        <div>
+            <b3>Sponsorater</b3>
+            <b3>Oliver@podcast.dk</b3>
+        </div>
+        <div>
+            <b3>Andet</b3>
+             <b3>vanvittigverdenshistorie@gmail.com</b3>
+        </div>
     </div>
-       <div>
-      <b3>Andet</b3>
-      <b3>vanvittigverdenshistorie@gmail.com</b3>
-    </div>
-
-    <div class="icons"> 
+<div class="icons"> 
         <img
         src="./billeder/facebook.svg"
         alt="facebook billede logo"
         width="20px"
         height="20px"
         />
-      
         <img
         src="./billeder/insta.svg"
         alt="instagram billede logo"
         width="20px"
         height="20px"
         />
-
         <img
         src="./billeder/spoti.svg"
         alt="sporify billede logo"
         width="20px"
         height="20px"
         />
-
         <img
         src="./billeder/tiktok.svg"
         alt="tiktok billede logo"
         width="20px"
         height="20px"
         />
-
-    </div>
-
-</section>
-
+</div>
+</article>
 </footer>
+
+<style>
+
+footer {
+width: 100%;
+margin-top: 40%;
+background-color:#CCD0C9;
+}
+.footer_1_1 {
+display: flex; 
+grid-template-columns: 4fr, 1fr;
+}
+.icons  { 
+display: flex;
+grid-template-columns: repeat(4, 1fr);
+justify-content: space-around;
+align-items: flex-start;
+gap: 2%;
+}
+    </style>
