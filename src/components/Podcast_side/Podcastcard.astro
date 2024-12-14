@@ -1,13 +1,41 @@
 ---
-const header = Astro.props.header;
-const text = Astro.props.text;
+/* const header = Astro.props.header;
+const text = Astro.props.text; */
+const {imgSrc, header, text} = Astro.props;
 ---
+
+
 <article>
-<div class="Podcast_card_1">
-    <img src="billeder/podcast.webp" alt="hovedpodcast billede">
-    <h3>{header}</h3>
-    <div class="b3"> {text}</div>
-    <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
-        <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
-</div>
+    <div class="podcast-card">
+        <img src={imgSrc} alt={header} />
+        <h3>{header}</h3>
+        <p>{text}</p>
+        <div class="spotify">
+        <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
+            <img src="/public/billeder/podcast_billeder/spotify_green_logo.svg"></a>
+      </div></div>
 </article>
+
+
+<style>
+    @media (max-width: 480px) {
+  .spotify img {
+    height: 24px;
+    width: 24px;
+  }
+  .podcast-card {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items:start;
+    gap: 8px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  img {
+    height: 105.35px;
+    width: 109.94px;
+    border-radius: 20px;
+  }
+    }
+</style>

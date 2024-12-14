@@ -6,9 +6,44 @@ import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
 ---
 
 <main>
+  <MainLayout /> 
     <!-- Hero sektion på podcast siden -->
     <Heropodcast />
  <!-- Alle VVh podcasts oversigt -->
-  <Podcast header="Vanvittig Verdenshistorie" text="Hør vores hovedpodcast! Her får du 90 min. vild historie i din øregang." />
-
+ <section class="podcast-list">
+  <Podcastcard 
+    imgSrc="/billeder/podcast_billeder/podcast.webp" 
+    header="Vanvittig Verdenshistorie"
+    text="Hør vores hovedpodcast! Her får du 90 min. vild historie i din øregang."
+  />
+  <Podcastcard 
+    imgSrc="/billeder/podcast_billeder/pixi.webp" 
+    header="Vanvittig Verdenshistorie Pixi"
+    text="Dybdegående fortællinger om historiens store personligheder."
+  />
+  <Podcastcard 
+    imgSrc="/billeder/podcast_billeder/jule.webp" 
+    header="Special - Julekalender"
+    text="Fascinerende fortællinger fra hele verden."
+  />
+</section>
 </main>
+
+<style>
+ @media (max-width: 480px) {
+  .podcast-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px; /* Afstand mellem kolonner */
+    flex-wrap: wrap;
+    max-width: 1200px; /* For at begrænse bredden */
+    margin: 0 auto;
+  }
+
+  .podcast-card {
+    flex: 1;
+    min-width: 280px; /* Minimum bredde af et kort */
+    max-width: 320px; /* Maksimal bredde af et kort */
+  }}
+
+</style>
