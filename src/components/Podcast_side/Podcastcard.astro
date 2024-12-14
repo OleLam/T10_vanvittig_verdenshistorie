@@ -1,13 +1,87 @@
 ---
-const header = Astro.props.header;
-const text = Astro.props.text;
+const {imgSrc, header, text} = Astro.props;
 ---
+
+
 <article>
-<div class="Podcast_card_1">
-    <img src="billeder/podcast.webp" alt="hovedpodcast billede">
-    <h3>{header}</h3>
-    <div class="b3"> {text}</div>
-    <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
-        <img src="billeder/spotify_green_logo.svg" alt="spotify"></a>
-</div>
+    <div class="podcast-card">
+        <img src={imgSrc} alt={header} />
+        <h3>{header}</h3>
+        <p>{text}</p>
+        </div>
+        <div class="spotify">
+          <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
+              <img src="/public/billeder/podcast_billeder/spotify_green_logo.svg"></a>
+        </div>
 </article>
+
+
+<style>
+  /* Mobil */
+    @media (max-width: 480px) {
+  .spotify img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .spotify {
+    display: flex;
+    align-items: center;
+  }
+  
+  img {
+    width: 109.938px;
+    height: 105.345px;
+    border-radius: 20px;
+  }
+
+  .podcast-card {
+    display: flex;
+    width: 122.284px;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 4px;
+  }
+
+  h3{
+    color: #582d32;
+
+  }
+
+  p{
+    font-family: "Martel Sans", serif;
+    font-size: 0.75rem;
+    color:#582d32;
+    margin-bottom: 20px;
+    margin-top: 8px;
+  }
+    }
+  
+  /* Website */
+  h3{
+    color: #582d32;
+    font-size: 48px;
+    margin-top: 16px;
+    width: 80%;
+  }
+
+  p{
+    font-family: "Martel Sans", serif;
+    font-size: 0.75rem;
+    color:#582d32;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    width: 80%;
+  }
+
+  .podcast-card img {
+    width: 383px;
+    height: 367px;
+    border-radius: 30px;
+  }
+
+  text{
+    width: 80%;
+  }
+</style>

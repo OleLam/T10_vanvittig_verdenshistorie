@@ -8,10 +8,11 @@
 
 h1 {
   font-family: "puffin-display", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-size: 72px;
   line-height: 5rem;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -28,6 +29,14 @@ h3 {
   font-style: normal;
   font-size: 3rem;
   line-height: 3.6rem;
+}
+
+p {
+  font-family: "Martel", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .b2 {
@@ -57,14 +66,12 @@ h3 {
   --text-color: #fffdea;
 }
 
+body {
+  background-color: var(--primary-color);
+}
 /****************************** margin ******************************/
 main {
   background-color: #582d32;
-}
-
-/******************************* images *************************************/
-img {
-  border-radius: 30px;
 }
 
 /******************************* mobil styling *************************************/
@@ -81,26 +88,46 @@ img {
   }
 
   h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.75rem;
   }
 
+  p {
+    font-family: "Martel Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
   .b2 {
+    font-family: "Martel Sans", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1rem;
     line-height: 1.7rem;
   }
 
   .b3 {
+    font-family: "Martel Sans", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 0.75rem;
     line-height: 1.25rem;
   }
 
+  body {
+    background-color: var(--primary-color);
+  }
   /******************************* margin *************************************/
-}
-/*******************************Padding*****************************/
-p,
-h1,
-h2,
-h3 {
-  padding: 20px;
+
+  /*******************************Padding*****************************/
+  /* Hvorfor er det her blevet sat på? vh Emilie :) */
+
+  /*   p,
+  h1,
+  h2,
+  h3 {
+    padding: 20px;
+  } */
 }

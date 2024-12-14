@@ -1,0 +1,55 @@
+---
+const navItems = [
+  { href: "/index", imgSrc: "/public/billeder/hjem.svg", alt: "Home" },
+  { href: "/liveshow", imgSrc: "/public/billeder/liveshow.svg", alt: "Live" },
+  { href: "/podcast", imgSrc: "/public/billeder/podcast.svg", alt: "Podcast" },
+  { href: "/shop", imgSrc: "/public/billeder/shop.svg", alt: "Shop" },
+  { href: "/omos", imgSrc: "/public/billeder/info.svg", alt: "Om os" },
+];
+---
+
+<nav class="bottom-nav">
+  <ul>
+    {navItems.map((item) => (
+      <li>
+        <a href={item.href} class="nav-item">
+          <img src={item.imgSrc} alt={item.alt} />
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #582d32;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .bottom-nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 lige kolonner */
+    gap: 16px; /* Mellemrum mellem kolonner */
+    margin: 16px;
+    padding: 8px;
+    list-style: none;
+    height: 48px;
+  }
+
+  .bottom-nav li {
+    display: flex;
+    justify-content: center; /* Centrer indhold horisontalt */
+    align-items: center; /* Centrer indhold vertikalt */
+  }
+
+  .bottom-nav .nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+</style>
