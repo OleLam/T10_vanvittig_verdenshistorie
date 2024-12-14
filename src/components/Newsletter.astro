@@ -2,31 +2,29 @@
 const {img, src, name, description} = Astro.props;
 ---
 
-<article>
-
-<h3>Meld dig til vores nyhedsbrev</h3>
-<p>Meld dig til vores nyhedsbrev og vær den første til at modtage nyt om Live shows, collabs og andet sjovt</p>
-<button>klik her</button>
-
+<article class="nyhedsbrev" >
+    <h3>Meld dig til vores nyhedsbrev</h3>
+    <p>Meld dig til vores nyhedsbrev og vær den første til at modtage nyt om Live shows, collabs og andet sjovt</p>
 <div>
-  <form>
+<form>
     <div>
-    <label>Name:</label>
-</div>
-    <input type="text" id="name" name="name" value="" />
-    <div>
-    <label>E-mail:</label>
-</div>
-
-    <input type="text" id="email" name="email" value="" />
-    <div>
-
-    <input type="submit" value="SIGN UP" />
-</div>
-
-  </form>
+        <label>E-mail:</label>
+        <input type="text" id="email" name="email" value="" />
+        <input type="submit" value="SIGN UP" />
+    </div>
+</form>
 </div>
 </article>
 
+<style>
+.nyhedsbrev  { 
+ border: 2px solid;
+border-color: #582d32;
+font-family: Arial, Helvetica, sans-serif;
+margin: 20px;
+height: 100%;
+  }
+</style>
 
-<style></style>
+
+
