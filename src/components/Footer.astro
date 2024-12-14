@@ -1,11 +1,14 @@
 ---
+import Card from "../components/Newsletter.astro";
 
 ---
 
 <footer>
-   <section>
 
-     <div>
+<Card/>
+
+    <article class ="footer_1_1" >
+     <div class= "kontakt" >
       <h3>Kontakt</h3>
       <b3>Booking</b3>
       <b3>Martin@bentertained.dk</b3>
@@ -47,9 +50,34 @@
         width="20px"
         height="20px"
         />
-
     </div>
-
-</section>
+</article>
 
 </footer>
+
+<style>
+
+footer {
+width: 100%;
+margin-top: 40%;
+background-color:#CCD0C9;
+
+}
+
+.footer_1_1 {
+display: flex; 
+grid-template-columns: 2fr, 1fr;
+}
+
+.icons  { 
+position: flex;
+display: flex;
+grid-template-columns: repeat(4, 1fr);
+margin: 5%
+justify-content: space-around;
+align-items: flex-start;
+padding: 2rem;
+gap: 2%;
+
+}
+    </style>
