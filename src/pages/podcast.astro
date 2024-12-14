@@ -3,13 +3,16 @@ import "../styles/styles.css";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heropodcast from "../components/Podcast_side/Heropodcast.astro";
 import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
+import Episodecard from "../components/Podcast_side/Episodecard.astro";
 ---
 
 <main>
+    <div class="podcast_side"> 
   <MainLayout /> 
     <!-- Hero sektion på podcast siden -->
     <Heropodcast />
  <!-- Alle VVh podcasts oversigt -->
+  <div class="graa-container">
  <section class="podcast-list">
   <Podcastcard 
     imgSrc="/billeder/podcast_billeder/podcast.webp" 
@@ -18,7 +21,7 @@ import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
   />
   <Podcastcard 
     imgSrc="/billeder/podcast_billeder/pixi.webp" 
-    header="Vanvittig Verdenshistorie Pixi"
+    header="Vanvittig historie Pixi"
     text="Dybdegående fortællinger om historiens store personligheder."
   />
   <Podcastcard 
@@ -27,23 +30,97 @@ import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
     text="Fascinerende fortællinger fra hele verden."
   />
 </section>
+
+<!-- VVH Episoder -->
+<div class="episode-container">
+<section>
+    <div  class="episoder">
+    <Episodecard 
+    imgSrc="/billeder/podcast_billeder/meltilmillioner.webp" 
+    text="#214: Mel for Millioner"
+  />
+
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/aus.webp" 
+    text="#213: I Auschwitz... Med vilje (REQUEST)"
+  />
+
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/spøjsesportsgrene.webp" 
+    text="#212: Spøjse Sportsgrene ll"
+  />
+</div>
+</section>
+</div>
+</div>
+</div>
+
+ <!-- Vanvidsbarometer -->
+ <div class="section_vanvidsbarometer">
+    <h2>vanvidsbarometer</h2>
+    <h3>I hvert afsnit vurderer vi historien på vores eget vanvidsbarometer. Her vurderer vi vildskab, lol-faktor,
+        uniqueness, indflydelse og ekstra spice.
+    </h3>
+    <p>Check Barometer Bjarke ud, som har visualiseret og lavet infografik til det meste vi nævner i
+        podcasten, holder regnskab på vores barometer og meget mere!</p>
+    <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
+    <a href="https://barometerbjarke.dk/" target="_blank" rel="noopener noreferrer">
+        <button type="button">Barometer Bjarke</button>
+    </a>
+</div>
 </main>
 
 <style>
  @media (max-width: 480px) {
+    /* Graa boks oversigt */
+    .graa-container {
+    background-color: #ccd0c9; 
+    padding: 16px;
+    margin: 0;
+    width: 100%; 
+    box-sizing: border-box; }
   .podcast-list {
+    margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px; /* Afstand mellem kolonner */
-    flex-wrap: wrap;
-    max-width: 1200px; /* For at begrænse bredden */
     margin: 0 auto;
   }
 
-  .podcast-card {
-    flex: 1;
-    min-width: 280px; /* Minimum bredde af et kort */
-    max-width: 320px; /* Maksimal bredde af et kort */
-  }}
+.episoder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolonner på små skærme */
+    gap: 8px;
+}
+
+/* Vanvidsbarometer */
+.section_vanvidsbarometer{
+    padding: 16px;
+}
+h2 {
+    color: #fffdea;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: #fffdea;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+p {
+    font-family: "Martel", sans;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.25rem;
+    color: #fffdea;
+    margin-bottom: 8px;
+}
+
+}
+
+  
+
+
 
 </style>
