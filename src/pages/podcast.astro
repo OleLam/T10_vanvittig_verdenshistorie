@@ -1,12 +1,20 @@
 ---
 import "../styles/styles.css";
+import Topmenu from "../components/Topmenu.astro";
+import Bottomnav from "../components/Bottomnav.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heropodcast from "../components/Podcast_side/Heropodcast.astro";
 import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
 import Episodecard from "../components/Podcast_side/Episodecard.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <main>
+  <div class="bottomnav">
+  <Bottomnav /> </div>
+  <div class="topmenu">
+  <Topmenu /></div>
     <div class="podcast_side"> 
   <MainLayout /> 
     <!-- Hero sektion på podcast siden -->
@@ -17,7 +25,7 @@ import Episodecard from "../components/Podcast_side/Episodecard.astro";
   <Podcastcard 
     imgSrc="/billeder/podcast_billeder/podcast.webp" 
     header="Vanvittig Verdenshistorie"
-    text="Hør vores hovedpodcast! Her får du 90 min. vild historie i din øregang."
+    text="I vores hovedpodcast får du 90 min. vild historie i din øregang."
   />
   <Podcastcard 
     imgSrc="/billeder/podcast_billeder/pixi.webp" 
@@ -39,21 +47,31 @@ import Episodecard from "../components/Podcast_side/Episodecard.astro";
     imgSrc="/billeder/podcast_billeder/meltilmillioner.webp" 
     text="#214: Mel for Millioner"
   />
-
   <Episodecard 
     imgSrc="/billeder/podcast_billeder/aus.webp" 
     text="#213: I Auschwitz... Med vilje (REQUEST)"
   />
-
   <Episodecard 
-    imgSrc="/billeder/podcast_billeder/spøjsesportsgrene.webp" 
+    imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
     text="#212: Spøjse Sportsgrene ll"
   />
+  <Episodecard 
+  imgSrc="/billeder/podcast_billeder/oswald.webp" 
+  text="#211: #211: Oswald Mosley: Den Britiske Hitler"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bahamas.webp" 
+  text="#210: Joe Carstairs: Babes, Både & Bahamas"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
+  text="#209: Bigfoots Besynderlige Baggrundshistorie"
+/>
 </div>
 </section>
 </div>
 </div>
-</div>
+
 
  <!-- Vanvidsbarometer -->
  <div class="section_vanvidsbarometer">
@@ -61,17 +79,23 @@ import Episodecard from "../components/Podcast_side/Episodecard.astro";
     <h3>I hvert afsnit vurderer vi historien på vores eget vanvidsbarometer. Her vurderer vi vildskab, lol-faktor,
         uniqueness, indflydelse og ekstra spice.
     </h3>
-    <p>Check Barometer Bjarke ud, som har visualiseret og lavet infografik til det meste vi nævner i
-        podcasten, holder regnskab på vores barometer og meget mere!</p>
+    <h3>Check Barometer Bjarke ud, som har visualiseret og lavet infografik til det meste vi nævner i
+        podcasten, holder regnskab på vores barometer og meget mere!</h3>
     <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
     <a href="https://barometerbjarke.dk/" target="_blank" rel="noopener noreferrer">
-        <button type="button">Barometer Bjarke</button>
+      <Button variant="primary" size="medium">Barometer Bjarke</Button>
     </a>
 </div>
+<Footer />
 </main>
 
 <style>
+  /* Mobil */
  @media (max-width: 480px) {
+
+  .topmenu {
+    display: none;
+  }
     /* Graa boks oversigt */
     .graa-container {
     background-color: #ccd0c9; 
@@ -104,22 +128,46 @@ h2 {
 h3 {
     color: #fffdea;
     font-size: 18px;
+    line-height: 1.2rem;
     margin-bottom: 8px;
 }
 
 p {
-    font-family: "Martel", sans;
-    font-weight: 400;
+  font-family: "Martel Sans", serif;
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.25rem;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
     color: #fffdea;
     margin-bottom: 8px;
 }
 
 }
 
-  
+  /* Desktop */ 
+.bottomnav {
+  display: none;
+}
+
+/* Graa boks oversigt */
+.graa-container {
+    background-color: #ccd0c9; 
+    padding: 24px;
+    margin: 0;
+    width: 100%; 
+    box-sizing: border-box; }
+  .podcast-list {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+.episoder {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 58px;
+}
 
 
 
