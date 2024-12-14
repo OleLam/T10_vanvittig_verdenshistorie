@@ -6,16 +6,32 @@ import Footer from "../components/Footer.astro";
 import CardOmOs from "../components/CardOmOs.astro";
 import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+
 ---
 <main>
     <MainLayout />
 <layout title="Om Os">
     <h1>Vanvittig Verdenshistorie</h1>
-<h2>Om os</h2>
-<p class="b2">Vi er Alexander og Peter, to venner med en passion for oel, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skoereste fortaellinger fra verdenshistorien fra nutid til fortid.</p>
+    <h2>Om os</h2>
+    <p class="b2">Vi er Alexander og Peter, to venner med en passion for oel, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skoereste fortaellinger fra verdenshistorien fra nutid til fortid.</p>
 
-<CardOmOs />
-<Instagram />
+
+<!-- <CardOmOs flexbillede>
+    <img src="/billeder/peter.webp" alt="peter">
+    <h2>Peter Loehde</p> 
+    <p>Jeg har lavet podcast siden jeg var 13 aar. Jeg er vild med at formidle podcast,
+    og arbejder som projektleder paa flere podcasts.</p>
+
+    <img src="/billeder/alex.webp" alt="alex">
+    <h2>Alexander Janku</p> 
+    <p>Jeg er vild med oel og video. Jeg har et helt rum fyldt med oel fra bund til top. Jeg laver dokumentarer og arbejder med lyd.</p>
+</CardOmOs>
+ -->
+<Instagram instagram>
+<img src="/billeder/instagram1.webp" alt="insta1">
+<img src="/billeder/instagram2.webp" alt="insta2">
+<img src="/billeder/instagram3.webp" alt="insta3">
+</Instagram>
 
 <h2>Vil du stoette podcasten?</h2>
 <p>Foerst og fremmest: TAK!
@@ -27,37 +43,10 @@ Vi er en gratis podcast, der ikke direkte tjener penge paa, at folk som dig lytt
 </main>
 
 <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-    main{
-        background-color: #582d32;
+    h1,h2,p{
+color: #fffdea;
     }
-     p, h1, h2, h3{
-        color: #fffdea;
-        max-width: 55ch;
-        padding: 10px;
-
+    p{
+        max-width: 65ch;
     }
-    h1{
-  font-family: "puffin-display", sans-serif;
-    }
-    h2, p{
-  font-family: "poiret-one", sans-serif;
-    }
- 
-body{
-    width: 100%;
-    overflow-x: hidden;
-}
-img{
-    width: 100%;
-    height: auto;
-} 
-@media (max-width: 480px) {
-
-} 
-
 </style>

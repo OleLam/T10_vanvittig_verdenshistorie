@@ -1,15 +1,12 @@
 ---
-
+const { instagram } = Astro.props;
 ---
 
-<div class="instagram">
-<img src="/billeder/instagram1.webp" alt="insta1">
-<img src="/billeder/instagram2.webp" alt="insta2">
-<img src="/billeder/instagram3.webp" alt="insta3">
-<img src="/billeder/instagram1.webp" alt="insta1">
-<img src="/billeder/instagram2.webp" alt="insta2">
-<img src="/billeder/instagram3.webp" alt="insta3">
-</div>
+
+
+<article class="instagram">
+    <slot />
+</article>
 
 <style>
     .instagram{
@@ -19,9 +16,4 @@
         max-width: 100%;
         height: auto;
     }
-
-    
-    
-  
-    
 </style>
