@@ -5,6 +5,10 @@ import "../styles/styles.css"
 import Button from "../components/Button.astro";
 import Topmenu from "../components/Topmenu.astro"
 import CardStandard from "../components/CardStandard.astro"
+import Episodecard from "../components/Podcast_side/Episodecard.astro";
+import Arstalfilter from "../components/Arstalfilter.astro";
+
+
 ---
 
 <!DOCTYPE html>
@@ -35,6 +39,53 @@ import CardStandard from "../components/CardStandard.astro"
   </CardStandard>
 
   <h2>Lyt til et udsnit af podcasten</h2>
+
+ <Arstalfilter />
+<!-- VVH Episoder -->
+<div class="episode-container">
+
+    <div  class="episoder">
+    <Episodecard 
+    imgSrc="/billeder/podcast_billeder/meltilmillioner.webp" 
+    text="#214: Episode om Mel for Millioner af kroner"
+  />
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/aus.webp" 
+    text="#213: I Auschwitz... Med vilje (REQUEST)"
+  />
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
+    text="#212: Episode om Spøjse Sportsgrene ll"
+  />
+ <Episodecard 
+  imgSrc="/billeder/podcast_billeder/oswald.webp" 
+  text="#211: #211: Oswald Mosley: Britiske Hitler"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bahamas.webp" 
+  text="#210: Joe Carstairs: Babes, Både & Bahamas"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
+  text="#209: Bigfoots Baggrundshistorie"
+/> 
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
+text="#212: Episode om Spøjse Sportsgrene ll"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/oswald.webp" 
+text="#211: #211: Oswald Mosley: Britiske Hitler"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/bahamas.webp" 
+text="#210: Joe Carstairs: Babes, Både & Bahamas"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
+text="#209: Bigfoots Baggrundshistorie"
+/> 
+</div>
 
 <!-- Card 2 -->
   <CardStandard header="Kom & se os live">
