@@ -33,13 +33,26 @@ console.log(data);
   <div class="cards-container">
     <!-- mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
-<CardLiveShow header={show.name} image={show.image} text={show.description} />
+<CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>
 
 
  ))}
  </div>  
     </section>
 
+<section>
+    <h3>Lyt med på podcasten</h3>
+    <p class="b2">Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
+</section>
+
 <Footer />
 
 </main>
+
+<style>
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+</style>
