@@ -37,9 +37,6 @@ console.log(data);
 </p>
 <Button variant="primary">Køb bilett</Button>
 </CardLiveShow>
-
-<CardLiveShow header="København"/>
-<CardLiveShow header="Aarhus    "/>
 </section>
 
 
@@ -47,14 +44,13 @@ console.log(data);
 
 <section>
     
-    <!-- mapping igenem data og returnerer et card for hver show
+    <!-- mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
-            <div class="cardliveshow">
-                <h2>{show.title}</h2>
-                <p>{show.description}</p>
-            </div>
-        ))}
-    </section> -->
+<CardLiveShow header={show.name} text={show.description} image={show.image} soldOut={true}/>
+
+
+ ))}
+    </section>
 <Footer />
 
 </main>
