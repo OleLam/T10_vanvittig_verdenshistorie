@@ -1,38 +1,36 @@
 ---
-
+const { overskrift1, text1, image1, overskrift2, text2, image2 } = Astro.props;
 ---
-
-<div class="billedeflex">
-    <div>
-        <img src="/billeder/peter.webp" alt="peter">
-            <h2>Peter Loehde</h2>
-        <p class="tekst">Jeg har lavet podcast siden jeg var 13 aar. Jeg er vild med at formidle podcast, og arbejder som projektleder paa flere podcasts.</p>
-    </div>
-
-    <div>
-        <img src="/billeder/alex.webp" alt="alex">
-            <h2>Alexander Janku</h2>
-        <p class="tekst">Jeg er vild med oel og video. Jeg har et helt rum fyldt med oel fra bund til top. Jeg laver dokumentarer og arbejder med lyd.</p>
-    </div>
+<div class="flexbillede">
+    <article>
+        <img src={image1} alt={image1} />
+        <h2>{overskrift1}</h2>
+        <p>{text1}</p>
+    </article>
+    <article>
+        <img src={image2} alt={image2} />
+        <h2>{overskrift2}</h2>
+        <p>{text2}</p>
+    </article>
 </div>
 
 <style>
-
-    .billedeflex{
-        display: flex;
-        gap: 10px;
-    }
-.tekst{
-    max-width: 50ch;
+.flexbillede {
+    display: flex;
+    gap: 10px;
 }
-h2, p{
-    color: #fffdea;
-   padding: 10px;
-}
-img{
-    width: 100%;
+img {
+    max-width: 250px;
     height: auto;
-    max-width: 50%;
-    max-height: 50%;
+    border-radius: 10px;
+}
+h2, p {
+    color: #fffdea;
+    max-width: 65ch;
 }
 </style>
+
+
+
+
+
