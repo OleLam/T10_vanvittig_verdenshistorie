@@ -1,43 +1,36 @@
 ---
-const { flexbillede } = Astro.props;
+const { overskrift1, text1, image1, overskrift2, text2, image2 } = Astro.props;
 ---
-
-<article class="flexbillede">
-    <div>
-        <slot />
-    </div>
-</article>
-
-<CardOmOs>
-  <div>
-    <img src="/billeder/peter.webp" alt="peter" />
-    <h2>Peter Loehde</h2>
-    <p>Jeg har lavet podcast siden jeg var 13 år...</p>
-  </div>
-  <div>
-    <img src="/billeder/alex.webp" alt="alex" />
-    <h2>Alexander Janku</h2>
-    <p>Jeg er vild med øl og video...</p>
-  </div>
-</CardOmOs>
+<div class="flexbillede">
+    <article>
+        <img src={image1} alt={image1} />
+        <h2>{overskrift1}</h2>
+        <p>{text1}</p>
+    </article>
+    <article>
+        <img src={image2} alt={image2} />
+        <h2>{overskrift2}</h2>
+        <p>{text2}</p>
+    </article>
+</div>
 
 <style>
 .flexbillede {
     display: flex;
     gap: 10px;
 }
-
-.text{
-    max-width: 50ch;
-}
-h2, .text{
-    color: #fffdea;
-   padding: 10px;
-}
-img{
+img {
+    max-width: 250px;
     height: auto;
-    max-width: 70%;
-    max-height: 70%;
+    border-radius: 10px;
+}
+h2, p {
+    color: #fffdea;
+    max-width: 65ch;
 }
 </style>
+
+
+
+
 
