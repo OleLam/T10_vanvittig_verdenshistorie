@@ -1,7 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import TopNav from "../components/TopNav.astro";
+import Topmenu from "../components/Topmenu.astro";
 import Footer from "../components/Footer.astro";
+import CardLiveShow from "../components/CardLiveShow.astro";
+import Button from "../components/Button.astro";
+import Bottomnav from "../components/Bottomnav.astro";
 import "../styles/styles.css"
 import "../styles/layout.css"
 
@@ -14,27 +17,50 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 
 console.log(data);
 ---
+
 <main>
-<MainLayout metatitle="liveshow">
-    <TopNav />        
+    <Topmenu/>
+
+    <Bottomnav/>
+
+<MainLayout/>
+
 <section>
 <h1>Live Shows</h1>
 <p>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </p>
 </section>
 
 <section>
-    <!-- liveshows -->
+<CardLiveShow header="København" soldOut={true}/>
+
+<p>Vi tester et helt nyt koncept - og vi har brug for din hjælp til at file kanterne!"/>
+</p>
+<Button variant="primary">Køb bilett</Button>
+</CardLiveShow>
+
+<CardLiveShow header="København"/>
+<CardLiveShow header="Aarhus    "/>
 </section>
 
+
+
+
 <section>
-    <!-- mapping igenem data og returnerer et card for hver show -->
+    
+    <!-- mapping igenem data og returnerer et card for hver show
   {data.map((show) => (
-            <div class="card">
+            <div class="cardliveshow">
                 <h2>{show.title}</h2>
                 <p>{show.description}</p>
             </div>
         ))}
-    </section>
+    </section> -->
 <Footer />
-</MainLayout> 
+
 </main>
+
+<style>
+    h1, h2, p{
+        color: #fffdea;
+    }
+</style>

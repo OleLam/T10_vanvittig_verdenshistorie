@@ -1,0 +1,13 @@
+---
+// const header= Astro.props.header;
+// const text= Astro.props.text;
+const {header, text, soldOut} = Astro.props;
+---
+
+
+<article>
+<h2>{header}<h2/>
+    {soldOut && <p>UDSOLGT</p>}
+<slot />
+</article>
+
