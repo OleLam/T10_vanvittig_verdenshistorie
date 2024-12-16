@@ -1,0 +1,92 @@
+---
+import "../styles/styles.css";
+import Topmenu from "../components/Topmenu.astro";
+import Bottomnav from "../components/Bottomnav.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
+import Shopcard from "../components/Shopcard.astro";
+---
+
+<main>
+<div class="bottomnav"> <Bottomnav /> </div>
+<div class="topmenu"> <Topmenu /></div>
+<MainLayout /> 
+<div class="intro"> 
+<h1>Shop</h1>
+<h2>Vanvittig Verdenshistorie</h2>
+<h3>Som en god podcast har vi lavet merge, så i kan flashe at i er fans af Vanvittig Verdenshistorie og i kan hjælpe med at støtte os.</h3>
+</div>
+<Shopcard />
+
+<Footer />
+</main>
+
+<style>
+    /* Mobil */
+/* Intro */
+.topmenu {
+    display: none;
+}
+
+.intro {
+    margin: 16px;
+}
+
+h1{
+font-size: 36px;  
+color: #FFFDEA; 
+}
+
+h2{
+color: #FFFDEA;
+font-family: "poiret-one", sans-serif;
+font-size: 32px;  
+}
+
+h3{
+color: #FFFDEA;
+font-family: "poiret-one", sans-serif;
+font-size: 18px;
+line-height: 28px; 
+}
+
+p{
+    color: #FFFDEA;  
+    font-family: "Martel", serif;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .topmenu{
+        display: block;
+    }
+
+    .bottomnav {
+        display: none;
+    }
+
+    .intro {
+        margin: 24px;
+    }
+h1{
+font-size: 72px; 
+}
+
+
+h2{
+font-size: 72px; 
+margin-bottom: 56px;
+}
+
+
+h3{
+font-size: 48px; 
+line-height: 58px;
+}
+
+
+
+}
+
+</style>

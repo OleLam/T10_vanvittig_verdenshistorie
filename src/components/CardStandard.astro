@@ -1,0 +1,30 @@
+---
+import "../styles/styles.css";
+
+const { header } = Astro.props;
+---
+
+<article class="CardStandard">
+  <h2>{header}</h2>
+  <slot />
+</article>
+
+<style>
+.CardStandard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 10px;
+  max-width: 1000px;
+  align-items: center;
+}
+
+.CardStandard img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.CardStandard h2 {
+  grid-column: span 2; /* Overskriften går på tværs af begge kolonner */
+}
+</style>
