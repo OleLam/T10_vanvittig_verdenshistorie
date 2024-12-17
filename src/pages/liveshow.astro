@@ -17,18 +17,18 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 
 console.log(data);
 ---
-
+<MainLayout>
 <main>
     <Topmenu/>
 
     <Bottomnav/>
 
-<MainLayout/>
 
 <section class="live-shows">
   <img src="/public/billeder/liveshow_illu.webp" alt="illustartion">
+  <div class="hero">
 <h1>Live Shows</h1>
-<h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </h3>
+<h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </h3> </div>
 
 
   <div class="cards-container">
@@ -49,21 +49,44 @@ console.log(data);
 <Footer />
 
 </main>
-
+</MainLayout>
 <style>
-
   .live-shows img {
     width: 100%;
     height: auto;
   }
-  .cards-container {
+/*   .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem;
+  } */
+
+  .hero {
+    margin: 24px;
+  }
+  h1 {
+    font-size: 36px;
+    color: #fffdea;
+    margin-bottom: 24px;
   }
 
-  h3.{
-
+  h3 {
+    font-size: 18px;
+    color: #fffdea;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
   }
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr;
+  margin-left: 16px;
+  padding: 8px;
+  }
+
+
 
 </style>

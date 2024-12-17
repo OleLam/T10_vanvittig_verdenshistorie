@@ -7,7 +7,7 @@ const {header, text, image, buyTicketUrl} = Astro.props;
 ---
 
 
-
+<div class="card-container">
 <article class="liveshow">
   <img src={image} alt={header} />
   <h2>{header}</h2>
@@ -16,27 +16,25 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   </div>
   <slot />
 </article>
+</div>
 
 <style>
   .liveshow {
-    display: flex;
+    display: flex; /* Indhold i kortet er fleksibelt */
     flex-direction: column;
-    align-items: center;
-    background-color:;
-    padding: 20px;
+    align-items: start;
     border-radius: 10px;
     color: #fffdea;
-    margin: 10px;
+    box-sizing: border-box;
   }
 
   img {
-    width: 100%;
-   
+    width: 176px;
+height: 169px;
     border-radius: 10px;
   }
 
   h2 {
-    margin: 10px 0;
     font-size: 1.5rem;
     color: #fffdea;;
   }
@@ -44,7 +42,7 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   .text p {
     font-size: 1rem;
     color: #fffdea;
-    text-align: center;
+    text-align: left;
   }
 
 </style>
