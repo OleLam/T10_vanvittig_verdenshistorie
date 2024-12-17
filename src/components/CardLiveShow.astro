@@ -5,8 +5,6 @@ import Button from "./Button.astro";
 // const text= Astro.props.text;
 const {header, text, image, buyTicketUrl} = Astro.props;
 ---
-
-
 <div class="card-container">
 <article class="liveshow">
   <img src={image} alt={header} />
@@ -27,39 +25,18 @@ const {header, text, image, buyTicketUrl} = Astro.props;
     color: #fffdea;
     box-sizing: border-box;
   }
-
   img {
     width: 176px;
 height: 169px;
     border-radius: 10px;
   }
-
   h2 {
     font-size: 1.5rem;
     color: #fffdea;;
   }
-
   .text p {
     font-size: 1rem;
     color: #fffdea;
     text-align: left;
   }
-
 </style>
-
-
-
-<!-- <style>
-
-    h1, h2, h3, p{
-        color: #fffdea;
-         max-width: 65ch;
-         color: 
-    }
- 
-  img {
-    width: 50%;
-    border-radius: 20px;
-  }
-
-</style> -->

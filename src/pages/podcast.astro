@@ -1,24 +1,15 @@
 ---
 import "../styles/styles.css";
-import Topmenu from "../components/Topmenu.astro";
-import Bottomnav from "../components/Bottomnav.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Heropodcast from "../components/Podcast_side/Heropodcast.astro";
 import Podcastcard from "../components/Podcast_side/Podcastcard.astro";
 import Arstalfilter from "../components/Arstalfilter.astro";
 import Episodecard from "../components/Podcast_side/Episodecard.astro";
 import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout>
 <main>
-  <div class="bottomnav">
-  <Bottomnav /> </div>
-  <div class="topmenu">
-  <Topmenu /></div>
-    <div class="podcast_side"> 
-  
     <!-- Hero sektion på podcast siden -->
     <Heropodcast />
  <!-- Alle VVh podcasts oversigt -->
@@ -106,15 +97,11 @@ text="#209: Bigfoots Baggrundshistorie"
       <Button variant="primary" size="medium">Barometer Bjarke</Button>
     </a>
 </div>
-<Footer />
 </main>
 </MainLayout>
 
 <style>
   /* Mobil */
-  .topmenu {
-    display: none;
-  }
     /* Graa boks oversigt */
     .graa-container {
     background-color: #ccd0c9; 
@@ -187,14 +174,6 @@ p {
 
   /* Desktop */ 
   @media (min-width: 768px) { 
-.bottomnav {
-  display: none;
-}
-
-.topmenu{
-  display: block;
-}
-
 /* Graa boks oversigt */
 .graa-container {
     background-color: #ccd0c9; 

@@ -1,17 +1,11 @@
 ---
 import "../styles/styles.css";
-import Topmenu from "../components/Topmenu.astro";
-import Bottomnav from "../components/Bottomnav.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro";
 import Shopcard from "../components/Shopcard.astro";
 ---
 
+<MainLayout> 
 <main>
-<div class="bottomnav"> <Bottomnav /> </div>
-<div class="topmenu"> <Topmenu /></div>
-<MainLayout /> 
 <div class="intro"> 
 <h1>Shop</h1>
 <h2>Vanvittig Verdenshistorie</h2>
@@ -19,8 +13,8 @@ import Shopcard from "../components/Shopcard.astro";
 </div>
 <Shopcard />
 
-<Footer />
 </main>
+</MainLayout> 
 
 <style>
     /* Mobil */

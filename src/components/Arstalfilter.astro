@@ -1,5 +1,5 @@
 ---
-  // Der er ingen specifik data fra Astro.props her, så vi kan bruge standardkode for nu.
+
 ---
 
 <div class="afsnit_karrusel">
@@ -20,13 +20,10 @@
     display: flex;
     gap: 10px;
   }
-
   .afsnit_karrusel {
     margin-top: 24px;
     margin-left: 12px ;
-
   }
-  
   .year-btn {
     width: 87px;
     height: 32px;
@@ -37,21 +34,19 @@
     font-size: 14px;
     cursor: pointer;
   }
-  
   /* Styling for den aktive knap */
   .year-btn.active {
   background-color: transparent;
   border: 2px solid #FF6011; 
   color: #FF6011; 
 }
-  
   /* Når knappen er hover */
   .year-btn:hover {
     background-color:#52bf77;
     color: white;
   }
   </style>
-  
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const buttons = document.querySelectorAll('.year-btn');

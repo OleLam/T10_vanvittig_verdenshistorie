@@ -1,28 +1,15 @@
 ---
 import "../styles/styles.css";
-import "../styles/layout.css";
-import Topmenu from "../components/Topmenu.astro";
-import Footer from "../components/Footer.astro";
 import CardOmOs from "../components/CardOmOs.astro";
 import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Bottomnav from "../components/Bottomnav.astro";
 import CardStandard from "../components/CardStandard.astro";
-import Episodecard from "../components/Podcast_side/Episodecard.astro";
 ---
 
 <MainLayout>
 <main>
-  <div class="topnav">
-    <Topmenu />
-</div>
-    <div class="bottomnav">
-      <Bottomnav />
-    </div>
-
 <h1>Vanvittig Verdenshistorie</h1>
-
 <CardStandard header ="om os">
     <div>
     <h2>Om os</h2>
@@ -33,11 +20,7 @@ import Episodecard from "../components/Podcast_side/Episodecard.astro";
     <img src="/public/billeder/podcast_billeder/logoglobus.webp" alt="logoglobus">
    </div>
 </CardStandard>
-
-  
-    <layout title="Om Os">
-
-
+<layout title="Om Os"> <!-- hvad er det -->
 <CardOmOs 
     image1="/billeder/podcast_billeder/peter.webp" 
     overskrift1="Peter Loehde" 
@@ -46,17 +29,12 @@ import Episodecard from "../components/Podcast_side/Episodecard.astro";
     overskrift2="Alexander Janku" 
     text2={`"Jeg er vild med øl og video. Jeg har et helt rum fyldt med øl fra bund til top. Jeg laver dokumentarer og arbejder med lyd."`} 
 />
-
-
 <Instagram billederaekke>
 <h2>Instagram</h2>
 <img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram1">
 <img class="ig" src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram2">
 <img class="ig" src="/public/billeder/podcast_billeder/instagram3.webp" alt="instagram3">
 </Instagram>
-
-
-
 
 <h2>Vil du støtte podcasten?</h2>
 <p>Først og fremmest: TAK!
@@ -69,8 +47,6 @@ Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytt
       <Button variant="primary" size="medium">Støt</Button>
     </a>
     </div>
-
-
 <h2>Kom til vores Live Shows</h2>
 <p>Vi turnerer jævnligt med podcasten. På nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </p>
 <div class="button">     
@@ -78,9 +54,6 @@ Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytt
       <Button variant="primary" size="medium">Live shows</Button>
     </a>
     </div>
-
-
-<Footer />
 </main>
 </MainLayout>
 
