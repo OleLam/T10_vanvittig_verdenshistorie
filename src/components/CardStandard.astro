@@ -1,31 +1,43 @@
 ---
-import "../styles/styles.css";
-
-const { header } = Astro.props;
+import "../styles/styles.css"; /* Sørg for, at stien til din CSS-fil er korrekt */
+const { header, tekst, img } = Astro.props;
 ---
 
-<article class="CardStandard">
+<article class="hvem">
   <h2>{header}</h2>
+  <p>{tekst}</p>
+  <img src={img} alt="Billede til kortet" />
   <slot />
 </article>
 
 
 <style>
-.CardStandard {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Mobil styling */
+.hvem {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-  padding: 10px;
-  max-width: 1000px;
-  align-items: center;
+  margin: 16px;
 }
 
-.CardStandard img {
+.hvem img {
   max-width: 100%;
   border-radius: 8px;
 }
 
-.CardStandard h2 {
-  grid-column: span 2; /* Overskriften går på tværs af begge kolonner */
+/* Desktop styling */
+@media (min-width: 768px) {
+  .hvem {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 24px;
+  }
+
+  .hvem h2 {
+    grid-column: span 2; /* Overskriften spænder over begge kolonner */
+  }
 }
 </style>
