@@ -7,7 +7,7 @@ const {header, text, image, buyTicketUrl} = Astro.props;
 <div class="card-container">
 <article class="liveshow">
   <img src={image} alt={header} />
-  <h2>{header}</h2>
+  <h3>{header}</h3>
   <div class="text">
     <p>{text}</p>
     <Button variant="primary" size="medium"> Køb billet </Button>
@@ -38,12 +38,8 @@ const {header, text, image, buyTicketUrl} = Astro.props;
     height: 169px;
     border-radius: 10px;
   }
-  h2 {
-    font-size: 1.5rem;
-    color: #fffdea;
-    line-height: 32px;
-    margin-top: 8px;
-  }
+
+  
   .text p {
     font-size: 1rem;
     color: #fffdea;

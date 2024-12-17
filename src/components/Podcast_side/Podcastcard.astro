@@ -50,15 +50,19 @@ const {imgSrc, header, text} = Astro.props;
 
   h3{
     color: #582d32;
-
   }
 
   p{
-    font-family: "Martel Sans", serif;
     font-size: 0.75rem;
     color:#582d32;
-    margin-bottom: 20px;
-    margin-top: 8px;
+    line-height: 1rem;
+    margin-top: 4px;
+  }
+
+  .spotify {
+  display: flex;
+  justify-content: flex-end; 
+  margin-right: 30px;
   }
     
   
@@ -84,6 +88,12 @@ p{
     height: 30px;
     width: 30px;
   }
+
+  .spotify {
+  display: flex;
+  justify-content: flex-end; 
+  margin-right: 90px;
+  }
 .podcast-card img {
   width: 383px;
   height: 367px;
@@ -93,7 +103,5 @@ p{
 .podcast-card {
  width: 388px;;
   }
-
-
     }
 </style>

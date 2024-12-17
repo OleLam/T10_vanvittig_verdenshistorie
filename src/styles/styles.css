@@ -16,6 +16,10 @@
 }
 
 /******************************* mobil styling *************************************/
+body {
+  margin-left: 16px;
+  margin-right: 16px;
+}
 
 /******************************* font *************************************/
 h1 {
@@ -23,6 +27,8 @@ h1 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 h2 {
@@ -30,6 +36,8 @@ h2 {
   font-size: 2rem;
   line-height: 2.7rem;
   color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 h3 {
@@ -37,6 +45,8 @@ h3 {
   font-size: 1rem;
   line-height: 1.75rem;
   color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 p {
@@ -46,7 +56,8 @@ p {
   font-size: 1rem;
   line-height: 2rem;
   color: var(--text-color);
-  max-width: 60ch;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .b2 {
@@ -56,6 +67,8 @@ p {
   font-size: 1rem;
   line-height: 1.7rem;
   color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .b3 {
@@ -65,6 +78,8 @@ p {
   font-size: 0.75rem;
   line-height: 1.25rem;
   color: var(--text-color);
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 body {
@@ -73,6 +88,11 @@ body {
 /********************* desk ***************************/
 /********************* Font ***************************/
 @media (min-width: 768px) {
+  body {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
   h1 {
     font-family: "puffin-display", sans-serif;
     font-weight: 600;
