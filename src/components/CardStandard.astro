@@ -9,10 +9,7 @@ const { header } = Astro.props;
   <slot />
 </article>
 
-<article class="CardStandard2">
-  <h2>{header}</h2>
-  <slot />
-</article>
+
 
 <style>
 .CardStandard {
@@ -22,15 +19,6 @@ const { header } = Astro.props;
   padding: 10px;
   max-width: 1000px;
   align-items: center;
-}
-
-.CardStandard2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 10px;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .CardStandard img {
