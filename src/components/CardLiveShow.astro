@@ -1,10 +1,9 @@
 ---
 import "../styles/styles.css"
 import Button from "./Button.astro";
-// const header= Astro.props.header;
-// const text= Astro.props.text;
 const {header, text, image, buyTicketUrl} = Astro.props;
 ---
+
 <div class="card-container">
 <article class="liveshow">
   <img src={image} alt={header} />
@@ -12,7 +11,6 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   <div class="text">
     <p>{text}</p>
     <Button variant="primary" size="medium"> Køb billet </Button>
-
   </div>
   <slot />
 </article>
@@ -51,4 +49,12 @@ const {header, text, image, buyTicketUrl} = Astro.props;
     color: #fffdea;
     text-align: left;
   }
+
+  @media (min-width: 768px) {
+    .liveshow img {
+    width: 383px;
+    height: 367px;
+    border-radius: 30px;
+  }
+}
 </style>

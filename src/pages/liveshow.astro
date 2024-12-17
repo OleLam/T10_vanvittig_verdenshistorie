@@ -16,6 +16,8 @@ console.log(data);
 <MainLayout>
 <main>
 <Bottomnav/>
+
+<!-- Live show card -->
 <section class="live-shows">
   <img src="/public/billeder/liveshow_illu.webp" alt="illustartion">
   <div class="hero">
@@ -25,7 +27,6 @@ console.log(data);
 <!--mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
 <CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>
-
  ))}
  </div>  
     </section>
@@ -61,5 +62,18 @@ console.log(data);
     margin: 16px;
   }
 
+  @media (min-width: 768px) {
+    .cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr;
+  margin-left: 24px;
+  padding: 42px;
+  } 
+
+  .lyt_podcast {
+    margin: 24px;
+  }
+  }
 
 </style>
