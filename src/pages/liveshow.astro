@@ -12,6 +12,7 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 }).then(res=>res.json());
 console.log(data);
 ---
+
 <MainLayout>
 <main>
 <Bottomnav/>
@@ -21,54 +22,31 @@ console.log(data);
 <h1>Live Shows</h1>
 <h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </h3> </div>
   <div class="cards-container">
-<!--     <!-- mapping igenem data og returnerer et card for hver show -->
+<!--mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
 <CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>
 
- ))} -->
-
+ ))}
  </div>  
     </section>
 
-<section>
-    <h3>Lyt med på podcasten</h3>
+
+<section class="lyt_podcast">
+    <h2>Lyt med på podcasten</h2>
     <p class="b2">Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
 </section>
-<<<<<<< HEAD
-
-<Footer />
-=======
->>>>>>> amanda
 </main>
 </MainLayout>
 
+
 <style>
+  /* Mobil */
   .live-shows img {
     width: 100%;
     height: auto;
   }
-/*   .cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
-  } */
-
   .hero {
     margin: 24px;
-  }
-  h1 {
-    font-size: 36px;
-    color: #fffdea;
-    margin-bottom: 24px;
-  }
-
-  h3 {
-    font-size: 18px;
-    color: #fffdea;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
   }
 
 .cards-container {
@@ -79,6 +57,9 @@ console.log(data);
   padding: 16px;
   }
 
+  .lyt_podcast {
+    margin: 16px;
+  }
 
 
 </style>

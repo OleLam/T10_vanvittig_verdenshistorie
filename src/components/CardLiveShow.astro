@@ -11,6 +11,8 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   <h2>{header}</h2>
   <div class="text">
     <p>{text}</p>
+    <Button variant="primary" size="medium"> Køb billet </Button>
+
   </div>
   <slot />
 </article>
@@ -25,8 +27,6 @@ const {header, text, image, buyTicketUrl} = Astro.props;
     color: #fffdea;
     box-sizing: border-box;
   }
-<<<<<<< HEAD
-
   .liveshow p {
     width: 80%;
   }
@@ -34,11 +34,10 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   .liveshow h2 {
     width: 80%;
   }
-=======
->>>>>>> amanda
-  img {
+
+  .liveshow img {
     width: 176px;
-height: 169px;
+    height: 169px;
     border-radius: 10px;
   }
   h2 {
