@@ -1,7 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import TopNav from "../components/TopNav.astro";
+import Topmenu from "../components/Topmenu.astro";
 import Footer from "../components/Footer.astro";
+import CardLiveShow from "../components/CardLiveShow.astro";
+import Button from "../components/Button.astro";
+import Bottomnav from "../components/Bottomnav.astro";
 import "../styles/styles.css"
 import "../styles/layout.css"
 
@@ -14,27 +17,42 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 
 console.log(data);
 ---
+
 <main>
-<MainLayout metatitle="liveshow">
-    <TopNav />        
-<section>
+    <Topmenu/>
+
+    <Bottomnav/>
+
+<MainLayout/>
+
+<section class="live-shows">
 <h1>Live Shows</h1>
-<p>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </p>
-</section>
+<h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </h3>
 
-<section>
-    <!-- liveshows -->
-</section>
 
-<section>
+  <div class="cards-container">
     <!-- mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
-            <div class="card">
-                <h2>{show.title}</h2>
-                <p>{show.description}</p>
-            </div>
-        ))}
+<CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>
+
+
+ ))}
+ </div>  
     </section>
+
+<section>
+    <h3>Lyt med på podcasten</h3>
+    <p class="b2">Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
+</section>
+
 <Footer />
-</MainLayout> 
+
 </main>
+
+<style>
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+</style>
