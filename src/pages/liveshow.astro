@@ -26,17 +26,18 @@ console.log(data);
 <MainLayout/>
 
 <section class="live-shows">
+  <img src="/public/billeder/liveshow_illu.webp" alt="illustartion">
 <h1>Live Shows</h1>
 <h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </h3>
 
 
   <div class="cards-container">
-    <!-- mapping igenem data og returnerer et card for hver show -->
+<!--     <!-- mapping igenem data og returnerer et card for hver show -->
   {data.map((show) => (
 <CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>
 
+ ))} -->
 
- ))}
  </div>  
     </section>
 
@@ -50,9 +51,19 @@ console.log(data);
 </main>
 
 <style>
+
+  .live-shows img {
+    width: 100%;
+    height: auto;
+  }
   .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem;
   }
+
+  h3.{
+
+  }
+
 </style>
