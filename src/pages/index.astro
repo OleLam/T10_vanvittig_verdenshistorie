@@ -24,9 +24,61 @@ import Arstalfilter from "../components/Arstalfilter.astro";
 <Button variant="primary" size="medium">Om os</Button>
 </div>
 
+<div class="graa-container" >
   <h2>Lyt til et udsnit af podcasten</h2>
  <Arstalfilter />
 <!-- VVH Episoder -->
+
+  <div class="episode-container">
+    <div  class="episoder">    
+    <Episodecard 
+    imgSrc="/billeder/podcast_billeder/meltilmillioner.webp" 
+    text="#214: Episode om Mel for Millioner af kroner"
+  />
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/aus.webp" 
+    text="#213: I Auschwitz... Med vilje (REQUEST)"
+  />
+  <Episodecard 
+    imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
+    text="#212: Episode om Spøjse Sportsgrene ll"
+  />
+ <Episodecard 
+  imgSrc="/billeder/podcast_billeder/oswald.webp" 
+  text="#211: #211: Oswald Mosley: Britiske Hitler"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bahamas.webp" 
+  text="#210: Joe Carstairs: Babes, Både & Bahamas"
+/>
+<Episodecard 
+  imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
+  text="#209: Bigfoots Baggrundshistorie"
+/> 
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
+text="#212: Episode om Spøjse Sportsgrene ll"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/oswald.webp" 
+text="#211: #211: Oswald Mosley: Britiske Hitler"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/bahamas.webp" 
+text="#210: Joe Carstairs: Babes, Både & Bahamas"
+/>
+<Episodecard 
+imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
+text="#209: Bigfoots Baggrundshistorie"
+/> 
+  </div>
+</div>
+<p>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
+<Button variant="primary" size="medium">Lyt med</Button>
+</div>
+
+
+
 
 <!-- Card 2 -->
    <CardStandard 
@@ -38,13 +90,11 @@ import Arstalfilter from "../components/Arstalfilter.astro";
     <div class="knap" >
     <Button variant="primary" size="medium">Live shows</Button>
     </div>
-
-
-
 	<main/>
   </MainLayout>
-  <style>
 
+
+  <style>
 /* mobil */
 .hero{
   display: none;
@@ -52,10 +102,45 @@ import Arstalfilter from "../components/Arstalfilter.astro";
 .knap{
   margin: 16px;
 }
-
 h2 {
   margin: 16px;
 }
+  .episoder {
+  display: flex;                
+  overflow-x: auto;             
+  gap: 20px;                    
+  padding: 10px;                
+  scroll-snap-type: x mandatory; 
+}
+
+p{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Scroll bar */
+.episoder::-webkit-scrollbar {
+  height: 8px;
+}
+.episoder::-webkit-scrollbar-track {
+  background: transparent;
+}
+.episoder::-webkit-scrollbar-thumb {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="10"%3E%3Ccircle cx="5" cy="5" r="2" fill="%23ff6011" /%3E%3Ccircle cx="15" cy="5" r="2" fill="%23ff6011" /%3E%3Ccircle cx="25" cy="5" r="2" fill="%23ff6011" /%3E%3C/svg%3E') no-repeat;
+  border-radius: 50px; 
+  height: 6px;
+  width: 40px; 
+}
+.episoder::-webkit-scrollbar-thumb {
+    margin-left:200px;
+   
+  }
+    .graa-container {
+    background-color: #ccd0c9; 
+    padding: 16px;
+    margin: 0;
+    width: 100%; 
+    box-sizing: border-box; }
 /* desk */
 @media (min-width: 768px){
 .hero {
@@ -74,4 +159,5 @@ h2 {
   height: 100%;
   object-fit: cover; 
 }}
+
 </style>
