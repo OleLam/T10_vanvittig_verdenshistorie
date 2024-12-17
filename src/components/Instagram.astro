@@ -3,15 +3,17 @@ const { billederaekke } = Astro.props;
 ---
 
 <article class="instagram">
+    <div>
     <slot />
+    </div>
 </article>
 
 <style>
     .instagram{
         background-color: #CCD0C9;
-        display: flex;
+        flex-direction: column;
         gap: 10px;
         max-width: 100%;
-        height: auto;
+        height: auto; 
     }
 </style>

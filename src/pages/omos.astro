@@ -7,16 +7,26 @@ import CardOmOs from "../components/CardOmOs.astro";
 import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Bottomnav from "../components/Bottomnav.astro";
 ---
-<Topmenu />
+
 
 <main>
-    <MainLayout />
-<layout title="Om Os">
+  <div class="topnav">
+    <Topmenu />
+</div>
+    <div class="bottomnav">
+      <Bottomnav />
+    </div>
+
+
+  <MainLayout />
+    <layout title="Om Os">
     <h1>Vanvittig Verdenshistorie</h1>
     <h2>Om os</h2>
     <p class="b2">Vi er Alexander og Peter, to venner med en passion for oel, humor og vilde historier.
     I Vanvittig Verdenshistorie dykker vi ned i de skoereste fortaellinger fra verdenshistorien fra nutid til fortid.</p>
+
 
 <CardOmOs 
     image1="/billeder/podcast_billeder/peter.webp" 
@@ -27,39 +37,87 @@ import Button from "../components/Button.astro";
     text2={`"Jeg er vild med oel og video. Jeg har et helt rum fyldt med oel fra bund til top. Jeg laver dokumentarer og arbejder med lyd."`} 
 />
 
+
 <Instagram billederaekke>
 <h2>Instagram</h2>
-<img src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram1">
-<img src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram2">
-<img src="/public/billeder/podcast_billeder/instagram3.webp" alt="instagram3">
+<img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram1">
+<img class="ig" src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram2">
+<img class="ig" src="/public/billeder/podcast_billeder/instagram3.webp" alt="instagram3">
 </Instagram>
+
 
 
 <h2>Vil du stoette podcasten?</h2>
 <p>Foerst og fremmest: TAK!
 Vi er en gratis podcast, der ikke direkte tjener penge paa, at folk som dig lytter med! Derfor er sponsorater og donationer med til at holde gang i hjulene. En rigtig god maade at stoette paa er ved at donere et fast, lavt beloeb pr. afsnit via 10er.dk.</p>
-<Button />
-<Button />
-
+<div class="button">
+<a href="https://www.vanvittigverdenshistorie.dk/_files/ugd/5215d4_9efe62193f1b44bdaa6208ba08d70cae.pdf" target="_blank" rel="noopener noreferrer">
+      <Button variant="secondary" size="medium">Regnskab</Button>
+    </a>
+      <a href="https://10er.com/vanvittigverdenshistorie/" target="_blank" rel="noopener noreferrer">
+      <Button variant="primary" size="medium">Stoet</Button>
+    </a>
+    </div>
 
 
 <h2>Kom til vores Live Shows</h2>
 <p>Vi turnerer jaevnligt med podcasten. Paa nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder paa - men vi lover dig, at det bliver sjovt! </p>
-<Button />
+<div class="button">     
+<a href="liveshow" target="_blank" rel="noopener noreferrer">
+      <Button variant="primary" size="medium">Live shows</Button>
+    </a>
+    </div>
+
 
 <Footer />
 </main>
 
 
-/********************CSS************/
+
 <style>
     h1,h2,p{
 color: #fffdea;
     }
+   h1, h2{
+      font-size: 36px;
+    }
+   
     p{
-        max-width: 65ch;
+        max-width: 23ch;
   font-family: "poiret-one", sans-serif;
-
+ .b2{
+      font-size: 18px;
+    }
     }
     
+    .button{
+      padding: 10px;
+    }
+  
+    .ig{
+      max-width: 110px;
+       border-radius: 10px;
+       margin: auto;
+    }
+.topnav{
+  display: none;
+}    
+      @media (min-width: 768px) { 
+.bottomnav {
+  display: none;
+}
+.topnav{
+  display: block;
+}
+     h1, h2{
+      font-size: 72px;
+    }
+    p{
+      max-width: 45ch;
+    }
+    .b2{
+      font-size: 48px;
+max-width: 25ch;
+    }
+    }
 </style>
