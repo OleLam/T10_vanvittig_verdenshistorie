@@ -18,12 +18,12 @@ const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_
 console.log(data);
 ---
 
+<MainLayout>
 <main>
     <Topmenu/>
 
     <Bottomnav/>
 
-<MainLayout/>
 
 <section class="live-shows">
   <img src="/public/billeder/liveshow_illu.webp" alt="illustartion">
@@ -48,8 +48,8 @@ console.log(data);
 </section>
 
 <Footer />
-
 </main>
+</MainLayout>
 
 <style>
   .live-shows img {
@@ -85,7 +85,7 @@ console.log(data);
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr;
   margin-left: 16px;
-  padding: 8px;
+  padding: 16px;
   }
 
 
