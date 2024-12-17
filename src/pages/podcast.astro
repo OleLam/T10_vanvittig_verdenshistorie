@@ -11,13 +11,14 @@ import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro";
 ---
 
+<MainLayout>
 <main>
   <div class="bottomnav">
   <Bottomnav /> </div>
   <div class="topmenu">
   <Topmenu /></div>
     <div class="podcast_side"> 
-  <MainLayout /> 
+  
     <!-- Hero sektion på podcast siden -->
     <Heropodcast />
  <!-- Alle VVh podcasts oversigt -->
@@ -107,6 +108,7 @@ text="#209: Bigfoots Baggrundshistorie"
 </div>
 <Footer />
 </main>
+</MainLayout>
 
 <style>
   /* Mobil */
