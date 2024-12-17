@@ -14,15 +14,24 @@ import Arstalfilter from "../components/Arstalfilter.astro";
 <!DOCTYPE html>
 <html lang="da">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name = "generator" content={Astro.generator}/>
-    <title>vanvittigverdenshistorie</title>
+  <title>vanvittigverdenshistorie</title>
   </head>
 
 <main>
 <Topmenu />
 <MainLayout/>
+
+<article class="hero">
+  <video autoplay loop playsinline class="hero-video">
+    <source src="/video/vvh.mp4" type="video/mp4" />
+  </video>
+</article>
+
+<h1>hej alle</h1>
+
 <!-- Card 1 -->
   <CardStandard header="Hvem er vi?">
     <div>
@@ -34,7 +43,7 @@ import Arstalfilter from "../components/Arstalfilter.astro";
       <Button variant="primary" size="medium">Om os</Button>
     </div>
     <div>
-      <img src="billeder/podcast_billeder/Privat_peterogalex.png" alt="Billede af Peter og Alexander" />
+      <img src="/billeder/podcast_billeder/Privat_peterogalex.png" alt="Billede af Peter og Alexander" />
     </div>
   </CardStandard>
 
