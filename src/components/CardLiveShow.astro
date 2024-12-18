@@ -1,7 +1,7 @@
 ---
 import "../styles/styles.css"
 import Button from "./Button.astro";
-const {header, text, image, buyTicketUrl} = Astro.props;
+const {header, image, text, buyTicketUrl} = Astro.props;
 ---
 
 <div class="card-container">
@@ -10,7 +10,10 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   <h3>{header}</h3>
   <div class="text">
     <p>{text}</p>
-    <Button > <a href="{buyTicketUrl}"></Button></a>
+    {buyTicketUrl && (
+            <a href={buyTicketUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" size="medium">Køb billet</Button>
+            </a>)}
   </div>
   <slot />
 </article>
