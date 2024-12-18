@@ -5,7 +5,7 @@ import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import CardStandard from "../components/CardStandard.astro";
-
+import TextCard from "../components/TextCard.astro";
 ---
 
 <MainLayout>
@@ -38,40 +38,36 @@ import CardStandard from "../components/CardStandard.astro";
 <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram3">
 </Instagram>
 
-
-<div class="custom-wrapper ">
-<h2>Vil du støtte podcasten?</h2>
-<p>Først og fremmest: TAK!<br>
-Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytter med! Derfor er sponsorater og donationer med til at holde gang i hjulene. En rigtig god måde at støtte på er ved at donere et fast, lavt beløb pr. afsnit via 10er.dk.</p>
+<TextCard
+overskrift1="Vil du støtte podcasten?"
+text1="Først og fremmest: TAK! Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytter med! Derfor er sponsorater og donationer med til at holde gang i hjulene. En rigtig god måde at støtte på er ved at donere et fast, lavt beløb pr. afsnit via 10er.dk."
+image1="/billeder/podcast_billeder/stoethaender.webp"
+/>
 <div class="button">
 <a href="https://www.vanvittigverdenshistorie.dk/_files/ugd/5215d4_9efe62193f1b44bdaa6208ba08d70cae.pdf" target="_blank" rel="noopener noreferrer">
       <Button variant="secondary" size="medium">Regnskab</Button>
     </a>
       <a href="https://10er.com/vanvittigverdenshistorie/" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Støt</Button>
-    </a>
-    <img src="/public/billeder/podcast_billeder/stoethaender.webp" alt="stoet">
-    </div>
-    </div>
+</div>
 
-    <div class="custom-wrapper">
-<h2>Kom til vores Live Shows</h2>
-<p>Vi turnerer jævnligt med podcasten. På nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </p>
-<div class="button">     
+<TextCard
+overskrift1="Kom til vores Live Shows"
+text1="Vi turnerer jævnligt med podcasten. På nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt!"
+image1="/billeder/podcast_billeder/livesofa.webp"
+/>
+<div class="button">
 <a href="liveshow" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Live shows</Button>
     </a>
-     <img src="/public/billeder/podcast_billeder/livesofa.webp" alt="livesofa">
-    </div>
-    </div>
+</div>
+
 </main>
 </MainLayout>
 
 
 <style>
-    h1,h2,p{
-color: #fffdea;
-    }
+ 
    h1, h2{
       font-size: 36px;
     }
@@ -79,7 +75,7 @@ color: #fffdea;
    
     p{
         max-width: 23ch;
-  font-family: "poiret-one", sans-serif;
+  
  .b2{
       font-size: 18px;
     }
@@ -89,10 +85,8 @@ color: #fffdea;
       display: flex;
       gap: 20px;
       padding-bottom: 50px;
+      margin-left: 6px;
     }
-
-    
-  
     .ig{
       max-width: 110px;
        border-radius: 10px;
@@ -105,13 +99,16 @@ color: #fffdea;
   display: none;
   gap: 0px;
 }
-
-.CardStandard img{
-  display: none;
-}
       @media (min-width: 768px) { 
+
+.custom-wrapper :global(img){
+ display: block;
+ } 
 .bottomnav {
   display: none;
+}
+.button{
+  margin-left: 35px;
 }
 .topnav{
   display: block;
@@ -122,6 +119,10 @@ color: #fffdea;
     h1{
     padding-left: 24px;
    }
+  .overskriftstoet{
+    margin-top: 50px;
+  }
+   }
     p{
       max-width: 45ch;
     }
@@ -129,9 +130,7 @@ color: #fffdea;
       font-size: 48px;
 line-height: 58px;
     }
-    .custom-wrapper :global(img){
-      display: block;
-    }
 
-    }
+
+    
 </style>
