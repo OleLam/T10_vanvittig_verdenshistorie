@@ -7,13 +7,15 @@ const {imgSrc, header, text} = Astro.props;
     <div class="podcast-card">
         <img src={imgSrc} alt={header} />
         <h3>{header}</h3>
-        <div class="tekst">
-        <p>{text}</p></div>
-        </div>
-        <div class="spotify">
+    <div class="tekst">
+        <p>{text}</p>
+    </div>
+      
+    </div>
+    <div class="spotify">
           <a href="https://open.spotify.com/show/2SIj3k4uJ6B7hC1LosHdlP" target="hoved_podcast">
               <img src="/public/billeder/podcast_billeder/spotify_green_logo.svg"></a>
-        </div>
+    </div>
 </article>
 
 
@@ -50,6 +52,8 @@ const {imgSrc, header, text} = Astro.props;
 
   h3{
     color: #582d32;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   p{
@@ -57,6 +61,8 @@ const {imgSrc, header, text} = Astro.props;
     color:#582d32;
     line-height: 1rem;
     margin-top: 4px;
+    width: 100%;
+    margin: 0;
   }
 
   .spotify {
