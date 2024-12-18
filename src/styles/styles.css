@@ -16,10 +16,10 @@
 }
 
 /******************************* mobil styling *************************************/
-body {
+/* body {
   margin-left: 16px;
   margin-right: 16px;
-}
+} */
 
 /******************************* font *************************************/
 h1 {
@@ -81,18 +81,22 @@ p {
   margin-top: 16px;
   margin-bottom: 16px;
 }
-
+h1,
+h2,
+h3,
+p,
+.b1,
+.b2,
+.b3 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
 body {
   background-color: var(--background-color);
 }
 /********************* desk ***************************/
 /********************* Font ***************************/
 @media (min-width: 768px) {
-  body {
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-
   h1 {
     font-family: "puffin-display", sans-serif;
     font-weight: 600;
@@ -137,6 +141,16 @@ body {
     font-style: normal;
     font-size: 1rem;
     line-height: 2rem;
+  }
+  h1,
+  h2,
+  h3,
+  p,
+  .b1,
+  .b2,
+  .b3 {
+    margin-left: 24px;
+    margin-right: 24px;
   }
   body {
     background-color: var(--primary-color);

@@ -5,6 +5,7 @@ import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import CardStandard from "../components/CardStandard.astro";
+
 ---
 
 <MainLayout>
@@ -20,14 +21,15 @@ import CardStandard from "../components/CardStandard.astro";
 />
 </div>
 
-<CardOmOs 
+<CardOmOs
     image1="/billeder/podcast_billeder/peter.webp" 
     overskrift1="Peter Loehde" 
     text1="Jeg har lavet podcast siden jeg var 13 år. Jeg er vild med at formidle podcast, og arbejder som projektleder på flere podcasts."
     image2="/billeder/podcast_billeder/alex.webp" 
     overskrift2="Alexander Janku" 
     text2="Jeg er vild med øl og video. Jeg har et helt rum fyldt med øl fra bund til top. Jeg laver dokumentarer og arbejder med lyd."
-/>
+/> 
+
 
 
 <Instagram billederaekke> 
@@ -101,6 +103,7 @@ color: #fffdea;
 }    
 .custom-wrapper :global(img) {
   display: none;
+  gap: 0px;
 }
 
 .CardStandard img{
