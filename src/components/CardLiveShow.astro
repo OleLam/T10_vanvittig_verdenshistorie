@@ -39,9 +39,10 @@ const {header, image, text, buyTicketUrl} = Astro.props;
   }
 
   .liveshow img {
-    width: 176px;
-    height: 169px;
-    border-radius: 10px;
+   width: 100%; 
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover; 
   }
 
   .text p {
