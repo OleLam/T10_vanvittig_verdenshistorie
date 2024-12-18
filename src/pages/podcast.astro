@@ -59,10 +59,6 @@ import Button from "../components/Button.astro";
   text="#210: Joe Carstairs: Babes, Både & Bahamas"
 />
 <Episodecard 
-  imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
-  text="#209: Bigfoots Baggrundshistorie"
-/> 
-<Episodecard 
 imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
 text="#212: Episode om Spøjse Sportsgrene ll"
 />
@@ -74,10 +70,6 @@ text="#211: #211: Oswald Mosley: Britiske Hitler"
 imgSrc="/billeder/podcast_billeder/bahamas.webp" 
 text="#210: Joe Carstairs: Babes, Både & Bahamas"
 />
-<Episodecard 
-imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
-text="#209: Bigfoots Baggrundshistorie"
-/> 
 </div>
 </section>
 </div>
@@ -85,11 +77,11 @@ text="#209: Bigfoots Baggrundshistorie"
 
 
  <!-- Vanvidsbarometer -->
- <div class="section_vanvidsbarometer">
-    <h2>vanvidsbarometer</h2>
-    <h3>I hvert afsnit vurderer vi historien på vores eget vanvidsbarometer. Her vurderer vi vildskab, lol-faktor,
+ <div>
+    <h2>Vanvidsbarometer</h2>
+    <p>I hvert afsnit vurderer vi historien på vores eget vanvidsbarometer. Her vurderer vi vildskab, lol-faktor,
         uniqueness, indflydelse og ekstra spice.
-    </h3>
+    </p>
     <p>Check Barometer Bjarke ud, som har visualiseret og lavet infografik til det meste vi nævner i
         podcasten,holder regnskab på vores barometer og meget mere!</p>
     <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
@@ -123,11 +115,9 @@ text="#209: Bigfoots Baggrundshistorie"
   display: flex;                
   overflow-x: auto;             
   gap: 20px;                    
-  padding: 10px;                
   scroll-snap-type: x mandatory; 
+  margin-top: 8px;
 }
-
-
 /* Scroll bar */
 .episoder::-webkit-scrollbar {
   height: 8px;
@@ -144,23 +134,14 @@ text="#209: Bigfoots Baggrundshistorie"
 .episoder::-webkit-scrollbar-thumb {
     margin-left:200px;
   }
-
-/* Vanvidsbarometer */
-.section_vanvidsbarometer{
-    padding: 16px;
-}
-
 p {
-  font-family: "poiret-one", sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 34px;    
     color: #fffdea;
     margin-bottom: 8px;
-    
-
+    margin-top: 32px;
 }
-
+.BB-knap{
+  margin-bottom: 32px;
+}
   /* Desktop */ 
   @media (min-width: 768px) { 
 /* Graa boks oversigt */
@@ -178,22 +159,14 @@ p {
     margin: 0 auto;
     margin-bottom: 80px;
   }
-
 /* billede karrusel */
 .episoder {
   display: flex;               
   overflow-x: auto;            
   gap: 20px;                    
-  padding: 10px;                
   scroll-snap-type: x mandatory; 
 }
-
-/* Vanvidsbarometer */
-.section_vanvidsbarometer{
-    padding: 16px;
-}
-
-
-}
-
+.BB-knap{
+  margin-bottom: 56px;
+}}
 </style>

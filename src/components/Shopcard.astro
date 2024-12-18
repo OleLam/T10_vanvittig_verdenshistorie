@@ -3,32 +3,31 @@ import Button from "../components/Button.astro";
 import "../styles/styles.css";
 ---
 
-<main class="display">
+
+
+<article class="display" >
     <div class="bog">
-    <img src="public/billeder/bog.webp" alt="bog">
-    <h3>Vanvittig Verdenshistorie bog</h3>
-    <p>Vi har skrevet en bog!</p>
-    <p>"Vanvittig Verdenshistorie: 50 Røverhistorier fra virkeligheden" er et produkt af kærlighed. Kærlighed til en god røverhistorie over en øl. Kærlighed til fortiden og det, den kan lære os om nutiden. Og en kærlighed til dybt idiotiske fun facts.</p>
-    <a href="https://www.zebramedier.dk/vare/vanvittig-verdenshistorie-bog/">
-    <div class="button"> <Button variant="primary" size="medium">Køb bogen</Button>  </div></a>
-    <div class="pris"> 149 DKK </div>
-</div>
+        <img src="public/billeder/bog.webp" alt="bog">
+        <h3>Vanvittig Verdenshistorie bog</h3>
+        <p>Vi har skrevet en bog!</p>
+        <p>"Vanvittig Verdenshistorie: 50 Røverhistorier fra virkeligheden" er et produkt af kærlighed. Kærlighed til en god røverhistorie over en øl. Kærlighed til fortiden og det, den kan lære os om nutiden. Og en kærlighed til dybt idiotiske fun facts.</p>
+        <a href="https://www.zebramedier.dk/vare/vanvittig-verdenshistorie-bog/">
+        <div class="button"> <Button variant="primary" size="medium">Køb bogen</Button>  </div></a>
+        <div class="pris"> 149 DKK </div>
+    </div>
     <div class="shop">
-    <img src="public/billeder/liveshow1.webp" alt="shop">
-    <h3>shop</h3>
-    <p>I samarbejde med B-entertainmend sælger vi øl vi selv har brygget eller drukket i løbet af podcasten. 
+        <img src="public/billeder/liveshow1.webp" alt="shop">
+        <h3>shop</h3>
+        <p>I samarbejde med B-entertainmend sælger vi øl vi selv har brygget eller drukket i løbet af podcasten. 
         Find også mulleposer og t-shirts. </p>
-       
         <a href="https://shop.bentertained.dk/collections/kollektioner-vanvittig-verdenshistorie">
-    <div class="button"> <Button variant="primary" size="medium">Shop</Button>  </div></a>
-</div>
-</main>
+        <div class="button"> <Button variant="primary" size="medium">Shop</Button>  </div></a>
+    </div>
+</article>
+
 
 <style>
 /* Mobil */
-main{
-    margin: 24px;
-}
 img {
     width: 359px;
     height: 319.18px;
@@ -68,16 +67,17 @@ margin-right: 24px;
 }
 @media (min-width: 768px) {
     img {
-        width: 577px;
+    width: 577px;
     height: 513px;
     border-radius: 30px; 
     }
     .display{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        justify-items: center;
         width: 80%;
         gap: 210px;
+        margin: 24px;
+
     }
 
     .shop p {
