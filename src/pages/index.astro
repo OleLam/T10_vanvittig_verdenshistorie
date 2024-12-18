@@ -20,8 +20,11 @@ import Arstalfilter from "../components/Arstalfilter.astro";
   img="/billeder/podcast_billeder/Privat_peterogalex.png"
 />
 <div class="knap" >
-<Button variant="secondary" size="medium">Støt</Button>
-<Button variant="primary" size="medium">Om os</Button>
+ <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
+  <a href="https://10er.com/vanvittigverdenshistorie/"  target="_blank" rel="noopener noreferrer">
+<Button variant="secondary" size="medium">Støt</Button></a>
+<a href="/omos">
+<Button variant="primary" size="medium">Om os</Button></a>
 </div>
 
 <div class="graa-container" >
@@ -74,11 +77,8 @@ text="#209: Bigfoots Baggrundshistorie"
   </div>
 </div>
 <p>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
-<Button variant="primary" size="medium">Lyt med</Button>
+<a href="/podcast"><Button variant="primary" size="medium">Lyt med</Button></a>
 </div>
-
-
-
 
 <!-- Card 2 -->
    <CardStandard 
@@ -88,7 +88,7 @@ text="#209: Bigfoots Baggrundshistorie"
     >
     </CardStandard>
     <div class="knap" >
-    <Button variant="primary" size="medium">Live shows</Button>
+      <a href="/liveshow"><Button variant="primary" size="medium">Live shows</Button></a>
     </div>
 	<main/>
   </MainLayout>

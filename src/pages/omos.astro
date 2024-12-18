@@ -5,39 +5,43 @@ import Instagram from "../components/Instagram.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import CardStandard from "../components/CardStandard.astro";
+
 ---
 
 <MainLayout>
 <main>
-<h1>Vanvittig Verdenshistorie</h1>
-<CardStandard header ="om os">
-    <div>
-    <h2>Om os</h2>
-    <p class="b2">Vi er Alexander og Peter, to venner med en passion for øl, humor og vilde historier.
-    I Vanvittig Verdenshistorie dykker vi ned i de skøreste fortællinger fra verdenshistorien fra nutid til fortid.</p>
-   </div>
-   <div>
-    <img src="/public/billeder/podcast_billeder/logoglobus.webp" alt="logoglobus">
-   </div>
-</CardStandard>
-<layout title="Om Os"> <!-- hvad er det -->
-<CardOmOs 
+
+<h1>Vanvittig <br>verdenshistorie</h1>
+
+<div class="custom-wrapper">
+<CardStandard
+    header="Om os"
+    tekst="Vi er Alexander og Peter, to venner med en passion for øl, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skøreste fortællinger fra verdenshistorien fra nutid til fortid."
+    img="/public/billeder/podcast_billeder/logoglobus.webp" alt="logoglobus"
+/>
+</div>
+
+<CardOmOs
     image1="/billeder/podcast_billeder/peter.webp" 
     overskrift1="Peter Loehde" 
-    text1={`"Jeg har lavet podcast siden jeg var 13 år. Jeg er vild med at formidle podcast, og arbejder som projektleder på flere podcasts."`} 
+    text1="Jeg har lavet podcast siden jeg var 13 år. Jeg er vild med at formidle podcast, og arbejder som projektleder på flere podcasts."
     image2="/billeder/podcast_billeder/alex.webp" 
     overskrift2="Alexander Janku" 
-    text2={`"Jeg er vild med øl og video. Jeg har et helt rum fyldt med øl fra bund til top. Jeg laver dokumentarer og arbejder med lyd."`} 
-/>
-<Instagram billederaekke>
-<h2>Instagram</h2>
-<img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram1">
-<img class="ig" src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram2">
-<img class="ig" src="/public/billeder/podcast_billeder/instagram3.webp" alt="instagram3">
+    text2="Jeg er vild med øl og video. Jeg har et helt rum fyldt med øl fra bund til top. Jeg laver dokumentarer og arbejder med lyd."
+/> 
+
+
+
+<Instagram billederaekke> 
+<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram1">
+<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram2">
+<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram3">
 </Instagram>
 
+
+<div class="custom-wrapper ">
 <h2>Vil du støtte podcasten?</h2>
-<p>Først og fremmest: TAK!
+<p>Først og fremmest: TAK!<br>
 Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytter med! Derfor er sponsorater og donationer med til at holde gang i hjulene. En rigtig god måde at støtte på er ved at donere et fast, lavt beløb pr. afsnit via 10er.dk.</p>
 <div class="button">
 <a href="https://www.vanvittigverdenshistorie.dk/_files/ugd/5215d4_9efe62193f1b44bdaa6208ba08d70cae.pdf" target="_blank" rel="noopener noreferrer">
@@ -46,13 +50,19 @@ Vi er en gratis podcast, der ikke direkte tjener penge på, at folk som dig lytt
       <a href="https://10er.com/vanvittigverdenshistorie/" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Støt</Button>
     </a>
+    <img src="/public/billeder/podcast_billeder/stoethaender.webp" alt="stoet">
     </div>
+    </div>
+
+    <div class="custom-wrapper">
 <h2>Kom til vores Live Shows</h2>
 <p>Vi turnerer jævnligt med podcasten. På nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! </p>
 <div class="button">     
 <a href="liveshow" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Live shows</Button>
     </a>
+     <img src="/public/billeder/podcast_billeder/livesofa.webp" alt="livesofa">
+    </div>
     </div>
 </main>
 </MainLayout>
@@ -66,6 +76,7 @@ color: #fffdea;
       font-size: 36px;
     }
    
+   
     p{
         max-width: 23ch;
   font-family: "poiret-one", sans-serif;
@@ -75,8 +86,12 @@ color: #fffdea;
     }
 
     .button{
-      padding: 10px;
+      display: flex;
+      gap: 20px;
+      padding-bottom: 50px;
     }
+
+    
   
     .ig{
       max-width: 110px;
@@ -86,6 +101,14 @@ color: #fffdea;
 .topnav{
   display: none;
 }    
+.custom-wrapper :global(img) {
+  display: none;
+  gap: 0px;
+}
+
+.CardStandard img{
+  display: none;
+}
       @media (min-width: 768px) { 
 .bottomnav {
   display: none;
@@ -96,6 +119,9 @@ color: #fffdea;
      h1, h2{
       font-size: 72px;
     }
+    h1{
+    padding-left: 24px;
+   }
     p{
       max-width: 45ch;
     }
@@ -103,5 +129,9 @@ color: #fffdea;
       font-size: 48px;
 line-height: 58px;
     }
+    .custom-wrapper :global(img){
+      display: block;
+    }
+
     }
 </style>
