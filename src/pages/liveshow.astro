@@ -27,8 +27,7 @@ console.log(data);
       DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt! 
       </h3> 
   </div>
-<!-- <a href="https://bentertained.dk/eventpage/vanvittig-verdenshistorie/"  target="_blank" rel="noopener noreferrer">   target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed 
---> <!-- mapping igenem data og returnerer et card for hver show -->
+
   <div class="cards-container"> 
       {data.map((show) => (
       <CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>))}
@@ -41,7 +40,8 @@ console.log(data);
 <section class="lyt_podcast">
     <h2>Lyt med på podcasten</h2>
     <p class="b2">Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
-</section>
+<img src="/public/billeder/liveshow_illu.webp" alt="illustartion">
+  </section>
 </main>
 </MainLayout>
 
