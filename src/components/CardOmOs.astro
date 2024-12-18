@@ -18,11 +18,10 @@ const { overskrift1, text1, image1, overskrift2, text2, image2 } = Astro.props;
 .flexbillede {
     display: flex;
     gap: 50px;
-    justify-content: center;
 }
 img {
-    max-width: 176px;
-    height: auto;
+    width: 176px;
+    height: 169px;
     border-radius: 10px;
     margin-left: 16px;
 }
@@ -46,16 +45,15 @@ p{
          line-height: 2rem;
     }
        img {
-        width: 577px;
-    border-radius: 30px; 
+        width: 342px;
+        height: 282px;
+        border-radius: 30px; 
     
     }
     .flexbillede{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
+        display: flex;
+        justify-content: space-between;
         width: 80%;
-        gap: 210px;
         margin-left: 24px;
     }
 }

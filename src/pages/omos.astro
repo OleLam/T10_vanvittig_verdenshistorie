@@ -7,12 +7,9 @@ import Button from "../components/Button.astro";
 import CardStandard from "../components/CardStandard.astro";
 import TextCard from "../components/TextCard.astro";
 ---
-
 <MainLayout>
 <main>
-
 <h1>Vanvittig <br>verdenshistorie</h1>
-
 <div class="custom-wrapper">
 <CardStandard
     header="Om os"
@@ -20,7 +17,6 @@ import TextCard from "../components/TextCard.astro";
     img="/public/billeder/podcast_billeder/logoglobus.webp" alt="logoglobus"
 />
 </div>
-
 <CardOmOs
     image1="/billeder/podcast_billeder/peter.webp" 
     overskrift1="Peter Loehde" 
@@ -30,12 +26,15 @@ import TextCard from "../components/TextCard.astro";
     text2="Jeg er vild med øl og video. Jeg har et helt rum fyldt med øl fra bund til top. Jeg laver dokumentarer og arbejder med lyd."
 /> 
 
-
-
 <Instagram billederaekke> 
-<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram1">
-<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram2">
-<img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram3">
+<a class="instagram-billeder" href="https://www.instagram.com/vanvittigverdenshistorie/?hl=da">
+  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram1">
+  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram2">
+  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram3">
+  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram4">
+  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram5">
+  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram6">
+</a>
 </Instagram>
 
 <TextCard
@@ -49,6 +48,7 @@ image1="/billeder/podcast_billeder/stoethaender.webp"
     </a>
       <a href="https://10er.com/vanvittigverdenshistorie/" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Støt</Button>
+      </a>
 </div>
 
 <TextCard
@@ -56,43 +56,46 @@ overskrift1="Kom til vores Live Shows"
 text1="Vi turnerer jævnligt med podcasten. På nedenstaeende link kan du se om vi snart kommer forbi lige netop DIN by! Du ved aldrig, hvad vi finder på - men vi lover dig, at det bliver sjovt!"
 image1="/billeder/podcast_billeder/livesofa.webp"
 />
-<div class="button">
+
+<div class="button2">
 <a href="liveshow" target="_blank" rel="noopener noreferrer">
       <Button variant="primary" size="medium">Live shows</Button>
     </a>
 </div>
-
 </main>
 </MainLayout>
 
-
 <style>
- 
    h1, h2{
       font-size: 36px;
     }
-   
-   
     p{
         max-width: 23ch;
-  
  .b2{
       font-size: 18px;
     }
     }
-
-    .button{
+    .button, button2{
       display: flex;
       gap: 20px;
-      padding-bottom: 50px;
       margin-left: 6px;
     }
+    .button2{
+      margin-bottom: 40px;
+      margin-left: 6px;
+    } 
     .ig{
       max-width: 110px;
        border-radius: 10px;
-       margin: auto;
+       margin: 16px;
     }
-.topnav{
+
+  .instagram-billeder{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+.topnav, .website-billeder{
   display: none;
 }    
 .custom-wrapper :global(img) {
@@ -100,18 +103,20 @@ image1="/billeder/podcast_billeder/livesofa.webp"
   gap: 0px;
 }
       @media (min-width: 768px) { 
-
 .custom-wrapper :global(img){
  display: block;
  } 
 .bottomnav {
   display: none;
 }
-.button{
+.button, .button2{
   margin-left: 35px;
 }
 .topnav{
   display: block;
+}
+.website-billeder{
+display: inline;
 }
      h1, h2{
       font-size: 72px;
@@ -130,7 +135,4 @@ image1="/billeder/podcast_billeder/livesofa.webp"
       font-size: 48px;
 line-height: 58px;
     }
-
-
-    
 </style>
