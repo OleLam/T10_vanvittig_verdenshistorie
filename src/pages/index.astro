@@ -8,17 +8,21 @@ import Arstalfilter from "../components/Arstalfilter.astro";
 ---
 <MainLayout>
 <main>
-<article class="hero">
-  <video autoplay loop playsinline class="hero-video">
-    <source src="/video/vvh.mp4" type="video/mp4" />
-  </video>
-</article>
+
+  <div class="video" >
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/f832a26e-1c1c-4a81-932c-a9639cd10704/de6nqf2Kp4.lottie" background="transparent" speed="1" 
+style="width: auto; height:  auto;" loop autoplay></dotlottie-player>
+  </div>
+
 <!-- card 1 -->
+
 <CardStandard 
   header="Hvem er vi?"
   tekst="Vi er Alexander og Peter, to venner med en passion for øl, humor og vilde historier. I Vanvittig Verdenshistorie dykker vi ned i de skøreste fortællinger fra verdenshistorien – fra nutid til fortid."
   img="/billeder/podcast_billeder/Privat_peterogalex.png"
 />
+
 <div class="knap" >
  <!-- target=_blank = åbner link i ny fane. rel=noopner noreferrer = sikre angreb på den åbne side, øger sikkerhed -->
   <a href="https://10er.com/vanvittigverdenshistorie/"  target="_blank" rel="noopener noreferrer">
@@ -28,7 +32,7 @@ import Arstalfilter from "../components/Arstalfilter.astro";
 </div>
 
 <div class="graa-container" >
-  <h2>Lyt til et udsnit af podcasten</h2>
+  <h2 class="h2_lyt" >Lyt til et udsnit af podcasten</h2>
  <Arstalfilter />
 <!-- VVH Episoder -->
 
@@ -55,10 +59,6 @@ import Arstalfilter from "../components/Arstalfilter.astro";
   text="#210: Joe Carstairs: Babes, Både & Bahamas"
 />
 <Episodecard 
-  imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
-  text="#209: Bigfoots Baggrundshistorie"
-/> 
-<Episodecard 
 imgSrc="/billeder/podcast_billeder/sportsgrene.webp" 
 text="#212: Episode om Spøjse Sportsgrene ll"
 />
@@ -70,14 +70,13 @@ text="#211: #211: Oswald Mosley: Britiske Hitler"
 imgSrc="/billeder/podcast_billeder/bahamas.webp" 
 text="#210: Joe Carstairs: Babes, Både & Bahamas"
 />
-<Episodecard 
-imgSrc="/billeder/podcast_billeder/bigfoot.webp" 
-text="#209: Bigfoots Baggrundshistorie"
-/> 
+
   </div>
 </div>
-<p>Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
-<a href="/podcast"><Button variant="primary" size="medium">Lyt med</Button></a>
+ 
+<p class="p_lyt" >Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer. </p>
+<div class="knap2" >
+<a href="/podcast"><Button variant="primary" size="medium">Lyt med</Button></a> </div>
 </div>
 
 <!-- Card 2 -->
@@ -96,21 +95,39 @@ text="#209: Bigfoots Baggrundshistorie"
 
   <style>
 /* mobil */
-.hero{
+.video{
   display: none;
 }
 .knap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
   margin: 16px;
+  margin-bottom: 32px;
 }
+
+.knap2{
+  margin-bottom: 32px;
+}
+
 h2 {
   margin: 16px;
 }
+
+.h2_lyt { 
+  color: #582d32;
+}
+
+.p_lyt{
+ color: #582d32; 
+}
+
   .episoder {
   display: flex;                
   overflow-x: auto;             
   gap: 20px;                    
   padding: 10px;                
   scroll-snap-type: x mandatory; 
+  
 }
 p{
   margin-top: 16px;
@@ -141,21 +158,20 @@ p{
     box-sizing: border-box; }
 /* desk */
 @media (min-width: 768px){
-.hero {
+.video {
   display: block;
   position: relative;
   width: 100%;
-  height: 100vh; 
   overflow: hidden;
 }
-.hero-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-}}
+.knap{
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+  margin: 24px;
+  margin-bottom: 56px;
+}
+
+
+}
 
 </style>
