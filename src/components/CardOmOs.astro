@@ -17,13 +17,14 @@ const { overskrift1, text1, image1, overskrift2, text2, image2 } = Astro.props;
 <style>
 .flexbillede {
     display: flex;
-    gap: 10px;
+    gap: 50px;
     justify-content: center;
 }
 img {
     max-width: 176px;
     height: auto;
     border-radius: 10px;
+    
 }
 h2, p {
     color: #fffdea;
@@ -31,10 +32,12 @@ h2, p {
 }
 h2{
     font-size: 32px;
+    min-height: 90px;
 }
 p{
     font-size: 12px;
     max-width: 30ch;
+    line-height: 1.3rem;
 }
     @media (min-width: 768px) { 
     h2{ font-size: 60px;

@@ -3,17 +3,27 @@ const { billederaekke } = Astro.props;
 ---
 
 <article class="instagram">
-    <div>
+    <h2>Instagram</h2>
+    <div class="mellemrum">
     <slot />
     </div>
 </article>
 
 <style>
+
+   h2{
+    margin: 16px;
+    color: #582d32;
+   }
     .instagram{
         background-color: #CCD0C9;
-        flex-direction: column;
-        gap: 10px;
-        max-width: 100%;
-        height: auto; 
+        padding: 10px;
+    }
+    .mellemrum{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    gap: 10px; 
+    width: 100%;
     }
 </style>
