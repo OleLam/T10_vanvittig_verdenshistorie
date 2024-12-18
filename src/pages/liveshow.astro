@@ -21,7 +21,7 @@ console.log(data);
 <!-- Live show card -->
 
 <section class="live-shows">
-      <img class="live" src="/public/billeder/liveshow_illu.webp" alt="illustartion">
+      <img class="live" src="/public/billeder/liveshow_illu2.webp" alt="illustartion">
   <div class="hero">
       <h1>Live Shows</h1>
       <h3>Vi turnerer jævnligt med podcasten. På nedenstående link kan du se om vi snart kommer forbi lige netop 
@@ -32,7 +32,7 @@ console.log(data);
 
   <div class="cards-container"> 
       {data.map((show) => (
-      <CardLiveShow header={show.name} image={show.image} text={show.description} buyTicketUrl={show.buy_url}/>))}
+      <CardLiveShow header={show.name} image={show.image} text={show.description} date={show.date} buyTicketUrl={show.buy_url} start_time={show.start_time} end_time={show.end_time} pris={show.price}/>))}
   </div>
 
 
@@ -40,9 +40,9 @@ console.log(data);
       header="Lyt med på podcasten"
       tekst= "Hør vores 3 fantastiske podcasts, hvor vi dykker ned i skøre og fantastiske røverhistorier. Vi drikker en øl, deler en historie skiftevis, og vurdere til slut på vores eget vanvidsbarometer"
  img="/billeder/podcast_billeder/lyt_med_illu4.svg"
-    ></CardStandard>
-<div class="knap" >
-      <a href="/podcast"><Button variant="primary" size="medium">Lyt med</Button></a>
+   ></CardStandard>
+ <div class="knap">
+      <a href="/podcast"> <Button variant="primary" size="medium"> Lyt med </Button> </a>
     </div>
 </main>
 </MainLayout>
@@ -51,7 +51,7 @@ console.log(data);
 <style>
   /* Mobil */
   .live-shows img {
-    width: 111%;
+    width: 100%;
     height: auto;
      display: block;
   }
@@ -61,15 +61,11 @@ console.log(data);
 .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr;
   padding:20px;
   gap: 10px;
   }
 
-  a{
-    text-decoration: none;
-  }
-
+  
   .knap{
   display: grid;
   grid-template-columns: 1fr 1fr 3fr;
@@ -81,7 +77,6 @@ console.log(data);
     .cards-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
-  grid-template-rows: 1fr;
   padding:20px;
   gap:10px;
   } 
