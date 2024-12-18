@@ -10,11 +10,13 @@ const {header, text, image, buyTicketUrl} = Astro.props;
   <h3>{header}</h3>
   <div class="text">
     <p>{text}</p>
-    <Button variant="primary" size="medium"> Køb billet </Button>
+    <Button > <a href="{buyTicketUrl}"></Button></a>
   </div>
   <slot />
 </article>
 </div>
+
+
 
 <style>
   .liveshow {
