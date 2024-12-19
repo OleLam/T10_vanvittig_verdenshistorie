@@ -9,7 +9,7 @@ import TextCard from "../components/TextCard.astro";
 ---
 <MainLayout>
 <main>
-<h1>Vanvittig <br>verdenshistorie</h1>
+<h1>Vanvittig verdenshistorie</h1>
 <div class="custom-wrapper">
 <CardStandard
     header="Om os"
@@ -28,12 +28,15 @@ import TextCard from "../components/TextCard.astro";
 
 <Instagram billederaekke> 
 <a class="instagram-billeder" href="https://www.instagram.com/vanvittigverdenshistorie/?hl=da">
-  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram1">
-  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram2">
+  <img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram1">
+  <img class="ig" src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram2">
   <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram3">
-  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram4">
-  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram5">
-  <img class="ig website-billeder" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram6">
+  <img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram4">
+  <img class="ig"src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram5">
+  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram6">
+  <img class="ig" src="/public/billeder/podcast_billeder/instagram1.webp" alt="instagram7">
+  <img class="ig" src="/public/billeder/podcast_billeder/instagram2.webp" alt="instagram8">
+  <img class="ig" src="/public/billeder/podcast_billeder/omosinstagram.webp" alt="instagram9">
 </a>
 </Instagram>
 
@@ -85,9 +88,10 @@ image1="/billeder/podcast_billeder/livesofa.webp"
       margin-left: 6px;
     } 
     .ig{
-      max-width: 110px;
        border-radius: 10px;
        margin: 16px;
+       width: 110px;
+      height: 110px;
     }
 
   .instagram-billeder{
@@ -95,6 +99,7 @@ image1="/billeder/podcast_billeder/livesofa.webp"
     justify-content: space-between;
     width: 100%;
   }
+
 .topnav, .website-billeder{
   display: none;
 }    
@@ -127,12 +132,19 @@ display: inline;
   .overskriftstoet{
     margin-top: 50px;
   }
-   }
-    p{
-      max-width: 45ch;
-    }
-    .b2{
+      .b2{
       font-size: 48px;
 line-height: 58px;
     }
+
+    .ig{
+    width: 199px;
+    height: 196px;
+    }
+   
+    p{
+      max-width: 45ch;
+    }
+  }
+    
 </style>
