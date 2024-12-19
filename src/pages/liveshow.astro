@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import CardLiveShow from "../components/CardLiveShow.astro";
 import Button from "../components/Button.astro";
-import Bottomnav from "../components/Bottomnav.astro";
 import LytMed from "../components/LytMed.astro";
 import "../styles/styles.css"
 const data = await fetch("https://npzsiyrlhgyrlgqihmlr.supabase.co/rest/v1/live_shows", {
@@ -16,7 +15,6 @@ console.log(data);
 
 <MainLayout>
 <main>
-<Bottomnav/>
 
 <!-- Live show card -->
 
