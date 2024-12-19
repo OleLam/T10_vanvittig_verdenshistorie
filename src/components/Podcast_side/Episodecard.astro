@@ -10,10 +10,10 @@ const { imgSrc, text } = Astro.props;
     <!-- Audio på play -->
     <div class="lyd_play">
       <audio id="audio1" class="audio" preload="auto">
-        <source src="/public/audio/NY-citat-midt-podcast.m4a" type="audio/mp3">
+        <source src="/audio/NY-citat-midt-podcast.m4a" type="audio/mp3">
       </audio>
       <div class="lyd_play_1" id="playBtn1">
-        <img src="/public/billeder/podcast_billeder/play_logo.svg" alt="play">
+        <img src="/billeder/podcast_billeder/play_logo.svg" alt="play">
       </div>
     </div>
   </div>
@@ -86,11 +86,11 @@ p{
       playBtn.addEventListener('click', () => {
         if (audio.paused) {
           audio.play(); // Start afspilning
-          playBtn.querySelector('img').src = '/public/billeder/podcast_billeder/pause_logo.svg'; // Skift ikon til pause
+          playBtn.querySelector('img').src ="/billeder/podcast_billeder/pause_logo.svg"; // Skift ikon til pause
         } else {
           audio.pause(); // Pause afspilning
           audio.currentTime = 0; // Start lyden forfra
-          playBtn.querySelector('img').src = '/public/billeder/podcast_billeder/play_logo.svg'; // Skift ikon til play
+          playBtn.querySelector('img').src = "/billeder/podcast_billeder/play_logo.svg"; // Skift ikon til play
         }
       });
     });
