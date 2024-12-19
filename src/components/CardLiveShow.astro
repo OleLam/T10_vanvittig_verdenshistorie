@@ -1,19 +1,23 @@
 ---
 import "../styles/styles.css"
 import Button from "./Button.astro";
-const {header, image, text, buyTicketUrl} = Astro.props;
+const {header, image, text, buyTicketUrl, date, start_time, end_time, pris} = Astro.props;
 ---
 
 <div class="card-container">
 <article class="liveshow">
-  <img src={image} alt={header} />
+  <img src={image} alt={header} /> 
+  <p>{date}</p>
+  <p>{start_time.split(':').slice(0, 2).join(':')} til {end_time.split(':').slice(0, 2).join(':')}</p>
   <h3>{header}</h3>
+
   <div class="text">
     <p>{text}</p>
     {buyTicketUrl && (
             <a href={buyTicketUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="medium">Køb billet</Button>
+              <Button variant="primary">Køb billet</Button>
             </a>)}
+            {pris} kr.
   </div>
   <slot />
 </article>
