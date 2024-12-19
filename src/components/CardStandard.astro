@@ -22,7 +22,7 @@ const { header, tekst, img } = Astro.props;
 .hvem img {
   max-width: 100%;
   border-radius: 8px;
-  display: none;
+  
 }
 
 /* Desktop styling */
@@ -40,4 +40,9 @@ const { header, tekst, img } = Astro.props;
     grid-column: span 2; 
   }
 }
+
+@media (max-width: 768px) {
+  .hvem img {
+    display: none;
+  }
 </style>
