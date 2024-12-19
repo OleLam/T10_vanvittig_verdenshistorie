@@ -18,7 +18,15 @@ const { billederaekke } = Astro.props;
     .instagram{
         background-color: #CCD0C9;
         padding: 10px;
+        overflow-x: auto;
     }
+    .instagram::-webkit-scrollbar {
+        height: 25px;
+}
+.instagram::-webkit-scrollbar-thumb {
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="10"%3E%3Ccircle cx="5" cy="5" r="2" fill="%23ff6011" /%3E%3Ccircle cx="15" cy="5" r="2" fill="%23ff6011" /%3E%3Ccircle cx="25" cy="5" r="2" fill="%23ff6011" /%3E%3C/svg%3E') no-repeat;
+}
+
     .mellemrum{
     display: flex; 
     justify-content: space-between;
@@ -29,5 +37,5 @@ const { billederaekke } = Astro.props;
      .instagram{
         padding-left: 24px;
      }
-     }
+}
 </style>
